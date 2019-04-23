@@ -3,4 +3,4 @@ data/cache/*
 public/upload/*
 application/libs/DbTable/*
 scripts/builds/deploy/*
-library/*
+
