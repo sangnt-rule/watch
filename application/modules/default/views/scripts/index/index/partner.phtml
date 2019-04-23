@@ -1,0 +1,27 @@
+<?php if ($this->partnerData) { ?>
+    <div class="list-container">
+        <div class="list-block">
+            <div class="list-block__title"><?php echo $this->translate->_('index_partner');?></div>
+            <div class="list-brands">
+                <?php foreach ($this->partnerData as $data) { ?>
+                    <?php
+                    $url = $data[DbTable_Partner_Category::COL_PARTNER_CATEGORY_SUB_CONTENT];
+                    $imagePath = $data[DbTable_Partner_Category::COL_PARTNER_CATEGORY_IMAGE];
+                    $thumbnail = null;
+                    if ($imagePath) {
+                        #$thumbnail = $this->thumb($imagePath, 400);
+                        $thumbnail = HOST_UPLOAD . '/' . $imagePath;
+                    }
+                    $title = $data[DbTable_Partner_Category::COL_PARTNER_CATEGORY_NAME];
+                    #$url = $this->partnerCategoryUrl($data[DbTable_Partner_Category::COL_PARTNER_CATEGORY_ID], $title);
+                    ?>
+                    <div class="brand-item">
+                        <a target="_blank" href="<?php echo $url?>" class="effect-01" title="<?php echo $title;?>">
+                            <img src="<?php echo $thumbnail;?>" alt="<?php echo $title;?>">
+                        </a>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+    </div>
+<?php } ?>

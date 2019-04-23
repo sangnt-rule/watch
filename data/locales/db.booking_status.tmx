@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+<header creationtoolversion="1.0.0" datatype="winres" segtype="sentence" adminlang="en-us" srclang="de-at" o-tmf="abc" creationtool="XYZTool" >
+</header>
+<body>
+    <tu tuid='booking_status_init'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Vừa được đặt]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[New]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='booking_status_in_process'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Đang xử lý]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[In Process]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='booking_status_delivered'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Đã giao khách hàng]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Delivered]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='booking_status_cancellation'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Hủy - khách hàng từ chối booking]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Cancelled]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='booking_status_failed_delivery'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Hủy - không thể giao khách hàng]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Failed Delivery]]></seg>
+		</tuv>
+	</tu>
+</body>

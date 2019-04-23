@@ -1,0 +1,1 @@
+alter table feature_category add column feature_category_banner varchar(100) default null;

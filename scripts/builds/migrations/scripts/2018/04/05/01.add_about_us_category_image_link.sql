@@ -1,0 +1,1 @@
+alter table about_us_category add column about_us_category_image_link varchar(100);

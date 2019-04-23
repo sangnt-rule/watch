@@ -1,0 +1,565 @@
+<?xml version="1.0" ?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+<header creationtoolversion="1.0.0" datatype="winres" segtype="sentence" adminlang="en-us" srclang="de-at" o-tmf="abc" creationtool="XYZTool" >
+</header>
+<body>
+    <tu tuid='index_partner'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Đối tác của chúng tôi]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Our partner]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[Our partner]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='index_project'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[những dự án của Savemoney]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[projects of Savemoney]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[projects of Savemoney]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='index_footer_information'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Thông tin Savemoney]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Savemoney Information]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[Savemoney Information]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='index_'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[aaaa]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[aaaa]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[aaaa]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='index_travel_insurance_solution'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[KỲ NGHỈ TUYỆT VỜI CHO BẠN]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[YOUR WONDER JOURNEY]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='index_where_are_you_go'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[BẠN ĐI ĐÂU?]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[WHERE ARE YOU TRAVELLING?]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='index_how_long'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[BAO LÂU?]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[HOW LONG?]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='index_quote_online'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[KHÁM PHÁ NGAY]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[EXPLORE NOW]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='index_you_need'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[SẢN PHẨM VÀ DỊCH VỤ]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[PRODUCTS AND SERVICES ]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='index_need_schengen_area'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Tour Du Lịch]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Travel Packages]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='index_requirement_coverage'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Các tour du lịch trọn gói từ mọi miền trên cả nước đang chờ đợi bạn]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Many travel packages in Vietnam are waiting for you]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='index_need_coverage'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Tin Tức Du Lịch]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Travel News]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">you
+            <seg><![CDATA[]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='index_right_stay'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Dịch vụ du lịch phong phú của chúng tôi sẽ cho bạn một kỳ nghỉ trọn vẹn]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Our diversified services provide you with a perfect holiday]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='index_need_protection'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Vé Máy Bay]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Airplane Ticket]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='index_pay_stay'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Mua vé máy bay trong tích tắc, bạn sẽ không bỏ lỡ chuyến đi du lịch tuyệt vời nhất]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[You can buy tickets in seconds, you will never miss your wonderful journey]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='index_how_insurance'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Các Bước Thực Hiện]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[The Process]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='index_step_01'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[BƯỚC 01]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[STEP 01]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='index_step_01_title'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[ĐIỀN THÔNG TIN]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[FILL FORM]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='index_step_01_content_1'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Chỉ cần điền các thông tin cơ bản như tên, số điện thoại, địa chỉ...]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Only basic information such as name, phone number, address...]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[]]></seg>
+        </tuv>
+    </tu>
+     <tu tuid='index_step_01_content_2'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Nước cư trú]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Country of residence]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[]]></seg>
+        </tuv>
+    </tu>
+     <tu tuid='index_step_01_content_3'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Nước đến]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Country of destination]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[]]></seg>
+        </tuv>
+     </tu>
+     <tu tuid='index_step_01_content_4'>
+         <tuv xml:lang="vi">
+             <seg><![CDATA[Quốc tịch]]></seg>
+         </tuv>
+         <tuv xml:lang="en">
+             <seg><![CDATA[Nationality]]></seg>
+         </tuv>
+         <tuv xml:lang="zh">
+             <seg><![CDATA[]]></seg>
+         </tuv>
+     </tu>
+     <tu tuid='index_step_01_content_5'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Ngày sinh]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Date of birth]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[]]></seg>
+        </tuv>
+     </tu>
+     <tu tuid='index_step_01_content_6'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Thời gian lưu trú]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Duration of stay]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[]]></seg>
+        </tuv>
+     </tu>
+     <tu tuid='index_step_01_content_7'>
+            <tuv xml:lang="vi">
+                <seg><![CDATA[(dưới 3 tháng/ trên 3 tháng)]]></seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg><![CDATA[(up to 3 months / more than 3 months)]]></seg>
+            </tuv>
+            <tuv xml:lang="zh">
+                <seg><![CDATA[]]></seg>
+            </tuv>
+     </tu>
+     <tu tuid='index_step_01_content_8'>
+            <tuv xml:lang="vi">
+                <seg><![CDATA[Bạn có phải là sinh viên hay thực tập sinh không?]]></seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg><![CDATA[Are you a student or a trainee?]]></seg>
+            </tuv>
+            <tuv xml:lang="zh">
+                <seg><![CDATA[]]></seg>
+            </tuv>
+     </tu>
+     <tu tuid='index_step_01_content_9'>
+             <tuv xml:lang="vi">
+                 <seg><![CDATA[Thời hạn hợp đồng (từ 5 ngày trở lên)]]></seg>
+             </tuv>
+             <tuv xml:lang="en">
+                 <seg><![CDATA[Duration of the contract (from 5 days to more)]]></seg>
+             </tuv>
+             <tuv xml:lang="zh">
+                 <seg><![CDATA[]]></seg>
+             </tuv>
+      </tu>
+      <tu tuid='index_step_01_content_10'>
+          <tuv xml:lang="vi">
+              <seg><![CDATA[Ngày bắt đầu (của bảo hiểm gần với ngày khởi hành chuyến đi)]]></seg>
+          </tuv>
+          <tuv xml:lang="en">
+              <seg><![CDATA[Starting date (of the insurance closed to the travel departure date)]]></seg>
+          </tuv>
+          <tuv xml:lang="zh">
+              <seg><![CDATA[]]></seg>
+          </tuv>
+      </tu>
+    <tu tuid='index_step_02'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[BƯỚC 02]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[STEP 02]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='index_step_02_title'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[THANH TOÁN]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[PAYMENT]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='index_step_02_content'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Thanh toán được bảo mật tuyệt đối với các hình thức như qua thẻ ATM, hệ thống NASPAS, Visa, hay Mastercard...]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Secured Payment with ATM card with local banks through NASPAS Gate, Visa or MasterCard.]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='index_step_03'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[BƯỚC 03]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[STEP 03]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='index_step_03_title'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[NHẬN THÔNG BÁO]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[GET CONFIRMATION]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='index_step_03_content_1'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Nhận thông báo xác nhận qua các hình thức như email, tin nhắn, gọi điện..]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Receive your registered information via emails, messages or our call services...]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='index_step_03_content_2'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Bước này sẽ mất vài lần để hoàn tất nếu đăng ký của bạn không thành công]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[This step will take several times to complete if your register is fail]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='index_step_03_content_3'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Hồ sơ sẽ được gửi tới địa chỉ email bạn đã đăng ký]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[The file will be sent to the email which you registered]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='index_step_03_content_4'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Nhận hợp đồng bảo hiểm đã ký qua email ở định dạng PDF sẵn sàng để in.]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Receive by email the signed insurance policy in PDF format ready for print.]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='index_step_03_content_5'>
+            <tuv xml:lang="vi">
+                <seg><![CDATA[Tài liệu này đáp ứng yêu cầu xin VISA.]]></seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg><![CDATA[This document fullfills the request for VISA application.]]></seg>
+            </tuv>
+            <tuv xml:lang="zh">
+                <seg><![CDATA[]]></seg>
+            </tuv>
+        </tu>
+    <tu tuid='index_ask_question'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Những Câu Hỏi Thường Gặp]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Frequently Asked Questions]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[]]></seg>
+        </tuv>
+    </tu>
+     <tu tuid='index_how_minute'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[KỲ NGHỈ TUYỆT VỜI CỦA BẠN]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[YOUR WONDERFUL JOURNEY]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[]]></seg>
+        </tuv>
+     </tu>
+      <tu tuid='index_read_more'>
+         <tuv xml:lang="vi">
+             <seg><![CDATA[Đọc Thêm]]></seg>
+         </tuv>
+         <tuv xml:lang="en">
+             <seg><![CDATA[Read More]]></seg>
+         </tuv>
+         <tuv xml:lang="zh">
+             <seg><![CDATA[]]></seg>
+         </tuv>
+      </tu>
+       <tu tuid='index_view'>
+          <tuv xml:lang="vi">
+              <seg><![CDATA[Xem]]></seg>
+          </tuv>
+          <tuv xml:lang="en">
+              <seg><![CDATA[View]]></seg>
+          </tuv>
+          <tuv xml:lang="zh">
+              <seg><![CDATA[]]></seg>
+          </tuv>
+       </tu>
+      <tu tuid='index_new'>
+         <tuv xml:lang="vi">
+             <seg><![CDATA[Mới]]></seg>
+         </tuv>
+         <tuv xml:lang="en">
+             <seg><![CDATA[New]]></seg>
+         </tuv>
+         <tuv xml:lang="zh">
+             <seg><![CDATA[]]></seg>
+         </tuv>
+      </tu>
+      <tu tuid='index_finding_travel'>
+           <tuv xml:lang="vi">
+               <seg><![CDATA[Tìm kiếm các tour du lịch, dịch vụ, vé máy bay...dành cho bạn với chi phí hợp lý nhất <br> Nhấn "KHÁM PHÁ NGAY" để tìm hiểu thêm nhé!]]></seg>
+           </tuv>
+           <tuv xml:lang="en">
+               <seg><![CDATA[Looking for travel packages, services, airplane tickets... with the best price for you <br> Click "EXPLORE NOW" button for more information]]></seg>
+           </tuv>
+           <tuv xml:lang="zh">
+               <seg><![CDATA[]]></seg>
+           </tuv>
+      </tu>
+      <tu tuid='asked_questions_1'>
+           <tuv xml:lang="vi">
+               <seg><![CDATA[Khi muốn mua tour du lịch của công ty Vedulich.com phải làm như như thế nào?]]></seg>
+           </tuv>
+           <tuv xml:lang="en">
+               <seg><![CDATA[How to buy a tour of Vedulich.com?]]></seg>
+           </tuv>
+      </tu>
+      <tu tuid='asked_questions_2'>
+             <tuv xml:lang="vi">
+                 <seg><![CDATA[Làm thế nào để đặt phòng qua vedulich.com?]]></seg>
+             </tuv>
+             <tuv xml:lang="en">
+                 <seg><![CDATA[How to book a room via vedulich.com?]]></seg>
+             </tuv>
+      </tu>
+      <tu tuid='asked_questions_3'>
+             <tuv xml:lang="vi">
+                 <seg><![CDATA[Giá thuê xe Ô tô thế nào?]]></seg>
+             </tuv>
+             <tuv xml:lang="en">
+                 <seg><![CDATA[How is the rental car?]]></seg>
+             </tuv>
+      </tu>
+        <tu tuid='answer_1'>
+             <tuv xml:lang="vi">
+                 <seg><![CDATA[- Đăng kí trực tiếp qua website: vedulich.com hoặc liên hệ trực tiếp với chúng tôi.]]></seg>
+             </tuv>
+             <tuv xml:lang="en">
+                 <seg><![CDATA[- Register directly via website: vedulich.com or contact us directly.]]></seg>
+             </tuv>
+        </tu>
+        <tu tuid='answer_2'>
+             <tuv xml:lang="vi">
+                 <seg><![CDATA[- Đặt trực tiếp trên vedulich.com hoặc được tư vấn trực tiếp qua số điện thoại: 0366 624 188.]]></seg>
+             </tuv>
+             <tuv xml:lang="en">
+                 <seg><![CDATA[- Set directly on vedulich.com or consult directly via phone number: 0366 624 188.]]></seg>
+             </tuv>
+        </tu>
+       <tu tuid='answer_3'>
+             <tuv xml:lang="vi">
+                 <seg><![CDATA[- Giá phụ thuộc vào loại hợp đồng và lộ trình bạn cung cấp cho chúng tôi, chúng tôi sẽ báo giá
+                               cho bạn với mức phù hợp và rẻ nhất.]]></seg>
+             </tuv>
+             <tuv xml:lang="en">
+                 <seg><![CDATA[- Price depends on the type of contract and the route you provide us, we will quote for you with
+                               the most suitable and cheapest price.]]></seg>
+             </tuv>
+        </tu>
+      <tu tuid='month_june'>
+           <tuv xml:lang="vi">
+               <seg><![CDATA[20-06-2018]]></seg>
+           </tuv>
+           <tuv xml:lang="en">
+               <seg><![CDATA[20 June 2018]]></seg>
+           </tuv>
+      </tu>
+      <tu tuid='month_may'>
+             <tuv xml:lang="vi">
+                 <seg><![CDATA[01-05-2018]]></seg>
+             </tuv>
+             <tuv xml:lang="en">
+                 <seg><![CDATA[01 May 2018]]></seg>
+             </tuv>
+      </tu>
+      <tu tuid='month_july'>
+             <tuv xml:lang="vi">
+                 <seg><![CDATA[12-07-2018]]></seg>
+             </tuv>
+             <tuv xml:lang="en">
+                 <seg><![CDATA[12 July 2018]]></seg>
+             </tuv>
+      </tu>
+</body>

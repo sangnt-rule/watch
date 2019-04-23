@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+<header creationtoolversion="1.0.0" datatype="winres" segtype="sentence" adminlang="en-us" srclang="de-at" o-tmf="abc" creationtool="XYZTool" >
+</header>
+<body>
+	<tu tuid='admin_module_website_management'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Quản trị Website]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Website management]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_module_administrator'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Administration]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Administration]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_module_system_management'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Administration]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Administration]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_module_booking'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Đặt vé trực tuyến]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Booking Management]]></seg>
+		</tuv>
+	</tu>
+</body>

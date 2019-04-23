@@ -1,0 +1,75 @@
+<?xml version="1.0" ?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+<header creationtoolversion="1.0.0" datatype="winres" segtype="sentence" adminlang="en-us" srclang="de-at" o-tmf="abc" creationtool="XYZTool" >
+</header>
+<body>
+    <tu tuid='admin_login_index_password'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Mật khẩu]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Password]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_login_index_login'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Đăng nhập]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Login]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_login_index_authentication'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Đăng nhập hệ thống]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Authentication]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_login_index_authentication_failed_msg'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Thành thật xin lỗi. Tài khoản bạn vừa cung cấp không được tìm thấy trong hệ thống. Mời bạn đăng nhập lại.]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Sorry! Your account can not be found. Please try to login.]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_login_index_captcha'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Mã xác nhận]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Validation code]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_login_index_placehoder_captcha'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Nhập mã xác nhận]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Enter validation code]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_login_index_msg_validation_failed'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Thành thật xin lỗi. Tài khoản bạn vừa cung cấp không được tìm thấy trong hệ thống. Mời bạn đăng nhập lại.]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[
+				Sorry! Your account can not be found. Please try again.
+			]]></seg>
+        </tuv>
+    </tu>
+	<tu tuid='admin_login_index_msg_captcha_failed'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Thành thật xin lỗi. Mã xác nhận bạn nhập không chính xác. Mời bạn đăng nhập lại.]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[
+				Sorry! The validation code is not correct. Please try again.
+			]]></seg>
+        </tuv>
+    </tu>
+</body>

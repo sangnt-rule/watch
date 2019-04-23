@@ -1,0 +1,56 @@
+<?php if ($this->pageCount): ?>
+    <div class="tPagination">
+        <ul>
+            <li>
+                <!-- First page link -->
+                <?php if (isset($this->previous)): ?>
+                    <a href="<?php echo $this->currentFullUrl(array('page' => $this->first)); ?>">
+                        First
+                    </a>
+                <?php else: ?>
+                    <span class="disabled">First</span>
+                <?php endif; ?>
+            </li>
+            <li>
+                <!-- Previous page link -->
+                <?php if (isset($this->previous)): ?>
+                    <a href="<?php echo $this->currentFullUrl(array('page' => $this->previous)); ?>">&lt;</a>
+                <?php else: ?>
+                    <span class="disabled">&lt;</span>
+                <?php endif; ?>
+            </li>
+
+            <!-- Numbered page links -->
+            <?php foreach ($this->pagesInRange as $page): ?>
+                <li>
+                <?php if ($page != $this->current): ?>
+                    <a href="<?php echo $this->currentFullUrl(array('page' => $page)); ?>">
+                        <?php echo $page; ?>
+                    </a>
+                <?php else: ?>
+                    <?php echo $page; ?>
+                <?php endif; ?>
+                </li>
+            <?php endforeach; ?>
+
+            <li>
+                <!-- Next page link -->
+                <?php if (isset($this->next)): ?>
+                    <a href="<?php echo $this->currentFullUrl(array('page' => $this->next)); ?>">&gt;</a>
+                <?php else: ?>
+                    <span class="disabled">&gt;</span>
+                <?php endif; ?>
+            </li>
+            <li>
+                <!-- Last page link -->
+                <?php if (isset($this->next)): ?>
+                    <a href="<?php echo $this->currentFullUrl(array('page' => $this->last)); ?>">
+                        Last
+                    </a>
+                <?php else: ?>
+                    <span class="disabled">Last</span>
+                <?php endif; ?>
+            </li>
+         </ul>
+    </div>
+<?php endif; ?>

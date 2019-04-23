@@ -1,0 +1,6 @@
+.card .card-footer{
+    text-align: right;
+}
+.paging_simple_numbers>ul.pagination{
+    float: right;
+}

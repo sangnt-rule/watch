@@ -1,0 +1,25 @@
+<!-- Left navigation -->
+<ul id="menu" class="nav navbar-nav">
+    <?php foreach ($this->menuData as $module => $resourceData) { ?>
+        <li class="widgets"><a href="javascript:void(0)"><span><?php echo $this->translate->_($module); ?></span></a>
+            <ul class="sub">
+                <?php foreach ($resourceData as $resource => $privilegeData) { ?>
+                    <li>
+                        <a href="javascript:void(0)"><?php echo $this->translate->_($resource); ?></a>
+                        <ul>
+                            <?php foreach ($privilegeData as $privilege) {
+                                $class = $this->urlPath == $privilege[Application_Constant_Module_Admin::PREFIX_MENU_URL] ? 'current' : null;
+                                ?>
+                                <li>
+                                    <a href="/<?php echo $privilege[Application_Constant_Module_Admin::PREFIX_MENU_URL];?>" class="<?php echo $class;?>">
+                                        <?php echo $this->translate->_($privilege[Application_Constant_Module_Admin::PREFIX_MENU_NAME]); ?></a>
+                                </li>
+                            <?php } ?>
+                        </ul>
+                    </li>
+                <?php } ?>
+
+            </ul>
+        </li>
+    <?php } ?>
+</ul>

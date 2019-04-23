@@ -1,0 +1,316 @@
+<?xml version="1.0" ?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+<header creationtoolversion="1.0.0" datatype="winres" segtype="sentence" adminlang="en-us" srclang="de-at" o-tmf="abc" creationtool="XYZTool" >
+</header>
+<body>
+	<tu tuid='admin_privilege_listing'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Danh sách bài viết]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Listing]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_privilege_add_new'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Thêm mới bài viết]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Add new]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_privilege_update'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Cập nhật]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Update]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_privilege_edit'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Thêm mới]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Add new / Update]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_privilege_category_listing'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Quản lý danh mục]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Category Management]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_privilege_category_edit'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Thêm mới danh mục]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Add New Category]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_privilege_slider'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Quản lý Slider]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Slider Management]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_privilege_contact_us'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Thông tin liên hệ]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Contact Information]]></seg>
+		</tuv>
+		<tuv xml:lang="zh">
+			<seg><![CDATA[联系信息]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_privilege_comment'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Góp ý khách hàng]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Comment & Feedback]]></seg>
+		</tuv>
+		<tuv xml:lang="zh">
+			<seg><![CDATA[注释和反馈]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_privilege_recruitment'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Thông tin tuyển dụng]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Recruitment]]></seg>
+		</tuv>
+		<tuv xml:lang="zh">
+			<seg><![CDATA[招聘]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_privilege_map'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Bản đồ chỉ đường]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Map]]></seg>
+		</tuv>
+		<tuv xml:lang="zh">
+			<seg><![CDATA[地图]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_privilege_comment_reply'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Phản hồi khách hàng]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Comment]]></seg>
+		</tuv>
+		<tuv xml:lang="zh">
+			<seg><![CDATA[评论]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_privilege_souvenir'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Giới thiệu]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Introduction]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[Introduction]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='admin_privilege_hr_benefit'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Chính sách nhân sự]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[HR Benefit]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[HR Benefit]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='admin_privilege_ticket_online_introduction'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Hướng dẫn đặt vé online]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Ticket Online Introduction]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[Ticket Online Introduction]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='admin_privilege_ticket_online_rule'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Hệ thống giá vé]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Ticket Online Introduction]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[Ticket Online Introduction]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='admin_privilege_recruitment_listing'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Danh sách tuyển dụng]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Recruitment listing]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[Recruitment listing]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='admin_privilege_contact'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Thông tin liên hệ]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Contact Information]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[Contact Information]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='admin_privilege_slider_souvenir'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Slider quà lưu niệm]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Slider Souvenir]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[Slider Souvenir]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='admin_privilege_youtube'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Tin tức Youtube]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Youtube]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[Youtube]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='admin_privilege_horse'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Thành tích ngựa đua]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Horse information]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[Horse information]]></seg>
+        </tuv>
+    </tu>
+<tu tuid='admin_privilege_footer_contact_us'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Thông tin liên hệ]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Contact Us]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[Contact Us]]></seg>
+        </tuv>
+    </tu>
+<tu tuid='admin_privilege_footer_social_network'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Mạng xã hội]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Social Network]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[Social Network]]></seg>
+        </tuv>
+    </tu>
+<tu tuid='admin_privilege_footer_hotline'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Đường dây nóng]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Hotline]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[Social Network]]></seg>
+        </tuv>
+    </tu>
+<tu tuid='admin_privilege_footer_connect_with_us'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Liên hệ hợp tác]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Connect With Us]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[Connect With Us]]></seg>
+        </tuv>
+    </tu>
+<tu tuid='admin_privilege_footer_blog'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Blog]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Blog]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[Blog]]></seg>
+        </tuv>
+    </tu>
+<tu tuid='admin_privilege_footer_term'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Chính sách bảo mật]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Term]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[Term]]></seg>
+        </tuv>
+    </tu>
+<tu tuid='admin_privilege_footer_faq'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Câu hỏi thường gặp]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[FAQ]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[FAQ]]></seg>
+        </tuv>
+    </tu>
+<tu tuid='admin_privilege_how_to_saving'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[How do we buy travel insurrance?]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[How do we buy travel insurrance?]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[How do we buy travel insurrance?]]></seg>
+        </tuv>
+    </tu>
+<tu tuid='admin_privilege_footer_hotline'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Đường dây nóng]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Hotline]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[Social Network]]></seg>
+        </tuv>
+    </tu>
+</body>

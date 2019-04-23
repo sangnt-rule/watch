@@ -1,0 +1,10 @@
+<div class="page_slider">
+    <?php if (isset($this->bannerDetail) && $this->bannerDetail) { ?>
+            <img src="<?phP echo HOST_UPLOAD . $this->bannerDetail;?>" class="img-responsive" title="" />
+    <?php } elseif (isset($this->banner) && $this->banner[DbTable_Banner::COL_BANNER_IMAGE]) { ?>
+        <img src="<?phP echo HOST_UPLOAD . $this->banner[DbTable_Banner::COL_BANNER_IMAGE];?>" class="img-responsive" title="" />
+    <?php } else { ?>
+        <!--<img src="images/slide_1.jpg" class="img-responsive" title="" />-->
+    <?php } ?>
+
+</div>

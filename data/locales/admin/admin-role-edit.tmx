@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+<header creationtoolversion="1.0.0" datatype="winres" segtype="sentence" adminlang="en-us" srclang="de-at" o-tmf="abc" creationtool="XYZTool" >
+</header>
+<body>
+	<tu tuid='admin_role_edit_header'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Administration - Thêm mới/ cập nhật nhóm quản trị]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Administration - Add new/ Edit]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_role_edit_info'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Thông tin nhóm quản trị]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Administration group information]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_role_edit_'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[aaa]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[aaa]]></seg>
+		</tuv>
+	</tu>
+</body>

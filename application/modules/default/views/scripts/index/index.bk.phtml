@@ -1,0 +1,115 @@
+<?php if ($this->sliderData) { ?>
+    <div class="slider">
+        <ul class="bxslider">
+            <?php foreach ($this->sliderData as $data) { ?>
+                <?php
+                $image = HOST_UPLOAD . $data[DbTable_Slider::COL_SLIDER_IMAGE];
+                $url = HOST_UPLOAD . $data[DbTable_Slider::COL_SLIDER_URL];
+                ?>
+                <li><a href="<?php echo $url;?>"><img src="<?php echo $image;?>" class="center-block img-responsive"/></a></li>
+            <?php } ?>
+        </ul>
+    </div>
+<?php } ?>
+
+<?php if ($this->aboutUsData) { ?>
+    <div class="section_1 mt-30">
+        <div class=" container">
+            <img src="images/whatis-<?php echo $this->currentLocale;?>.png" width="30%" class="img-responsive center-block">
+            <div class="row mt-30">
+                <?php foreach ($this->aboutUsData as $data) { ?>
+                    <?php
+                    $imagePath = $data[DbTable_About_Us_Category::COL_ABOUT_US_CATEGORY_IMAGE];
+                    $thumbnail = null;
+                    if ($imagePath) {
+                        $thumbnail = $this->thumb($imagePath, 261);
+                    }
+                    $title = $data[DbTable_About_Us_Category::COL_ABOUT_US_CATEGORY_NAME];
+                    $subContent = $data[DbTable_About_Us_Category::COL_ABOUT_US_CATEGORY_SUB_CONTENT];
+                    $url = $this->aboutUsCategoryUrl($data[DbTable_About_Us_Category::COL_ABOUT_US_CATEGORY_ID], $title);
+                    ?>
+                    <div class="col-xs-6 col-md-3 mt-35">
+                        <a href="<?php echo $url?>" title="<?php echo $title;?>"><img src="<?php echo $thumbnail;?>" class="img-responsive center-block"></a>
+                        <p><?php echo $subContent;?></p>
+                        <p><a href="<?php echo $url?>" title="<?php echo $title;?>"><?php echo $this->translate->_('common_detail');?></a></p>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+    </div>
+<?php } ?>
+
+
+<?php if ($this->featureData) { ?>
+    <div class="section_2">
+        <div class="container">
+            <p class="fs30 color_1 text-uppercase text-center p-20 mt-50"><?php echo $this->translate->_('admin_resource_feature');?></p>
+            <div class="col-xs-12 col-sm-7">
+                <ul class="lst_1">
+                    <?php foreach ($this->featureData as $data) { ?>
+                        <?php
+                        $title = $data[DbTable_Feature_Category::COL_FEATURE_CATEGORY_NAME];
+                        $url = $this->featureCategoryUrl($data[DbTable_Feature_Category::COL_FEATURE_CATEGORY_ID], $title);
+                        ?>
+                        <li><a href="<?php echo $url;?>" title="<?php echo $title?>"><?php echo $title;?></a> </li>
+                    <?php } ?>
+                </ul>
+                <a href="<?php echo $this->configUrl($this->config, 'project');?>" class="btn_1 mt-50"><?php echo $this->translate->_('index_project');?></a>
+            </div>
+            <div class="col-xs-5 hidden-xs"><img src="images/phone.jpg" class="img-responsive center-block"></div>
+        </div>
+    </div>
+<?php } ?>
+
+
+<?php if ($this->sponsorNewsData) { ?>
+    <div class="section_2">
+        <div class="container">
+            <p class="fs30 color_1 text-uppercase text-center p-20 mt-50"><?php echo $this->translate->_('admin_resource_news');?></p>
+            <div class="row">
+                <?php foreach ($this->sponsorNewsData as $data) { ?>
+                    <?php
+                    $imagePath = $data[DbTable_News::COL_NEWS_IMAGE];
+                    $thumbnail = null;
+                    if ($imagePath) {
+                        $thumbnail = $this->thumb($imagePath, 217);
+                    }
+                    $title = $data[DbTable_News::COL_NEWS_TITLE];
+                    $subContent = $data[DbTable_News::COL_NEWS_SUB_CONTENT];
+                    $url = $this->newsUrl($data[DbTable_News::COL_NEWS_ID], $title);
+                    ?>
+                    <div class="col-xs-12 col-sm-4 mt-35">
+                        <a href="<?php echo $url;?>" title="<?php echo $title?>">
+                            <img src="<?php echo $thumbnail;?>" class="img-responsive center-block mb-30" alt="<?php echo $title;?>"></a>
+                        <a href="<?php echo $url;?>" title="<?php echo $title?>"><?php echo $title;?></a>
+                        <p class="text-center"><?php echo $subContent;?></p>
+                    </div>
+                <?php } ?>
+            </div>
+        </div>
+    </div>
+<?php }?>
+
+<?php if ($this->partnerData) { ?>
+    <div class="section_2">
+        <div class="container">
+            <p class="fs30 color_1 text-uppercase text-center p-20 mt-50"><?php echo $this->translate->_('index_partner');?></p>
+            <div class="partner_list">
+                <ul class="partner_list_slider">
+                    <?php foreach ($this->partnerData as $data) { ?>
+                        <?php
+                        $imagePath = $data[DbTable_Partner_Category::COL_PARTNER_CATEGORY_IMAGE];
+                        $thumbnail = null;
+                        if ($imagePath) {
+                            $thumbnail = $this->thumb($imagePath, 400);
+                        }
+                        $title = $data[DbTable_Partner_Category::COL_PARTNER_CATEGORY_NAME];
+                        $url = $this->partnerCategoryUrl($data[DbTable_Partner_Category::COL_PARTNER_CATEGORY_ID], $title);
+                        ?>
+                        <li><a href="<?php echo $url?>" title="<?php echo $title?>"><img src="<?php echo $thumbnail;?>" class="img-responsive center-block"></a> </li>
+                    <?php } ?>
+                </ul>
+            </div>
+        </div>
+    </div>
+<?php } ?>

@@ -1,0 +1,178 @@
+table{font-size: 12px !important;}
+fieldset.filter {
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    padding : 10px
+}
+fieldset.filter input[type=text]{
+    padding: 5px;
+    top: 0px;
+}
+fieldset div.selector{margin-top: 6px;}
+
+.wrapper{padding-top:20px}
+.widget{margin-top: 10px}
+h2{font-size: 20px;}
+
+.mTop20{margin-top: 20px}
+.f8{font-size: 8px;}
+.bd{font-weight: bolder;}
+
+.dialog-box{display: none}
+.dialog-box a{color: #002a80; font-weight: bolder; text-decoration: underline}
+table.dialog-edit{width: 100%; margin: 4px}
+table.dialog-edit td{text-align: left; padding: 3px 0px 3px 10px}
+table.dialog-edit .submit{}
+table.dialog-edit .submit td{text-align: center; padding-top: 20px}
+table.dialog-edit input[type=text],select{display: inline;}
+table.dialog-edit select{
+    background: white none repeat scroll 0 0;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 0 2px #f4f4f4;
+    color: #656565;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    padding: 7px 6px;
+}
+table.dialog-edit input:-moz-read-only { /* For Firefox */
+    background-color: #ccc;
+}
+table.dialog-edit input:read-only { /* For Firefox */
+    background-color: #ccc;
+}
+table.dialog-edit select:disabled { /* For Firefox */
+    background-color: #ccc;
+}
+table.dialog-edit label{float: none !important;}
+table.dialog-edit .req{display: inline !important; float: none !important;}
+table.dialog-edit .loading{display: none;}
+table.dialog-edit strong{font-size: 12px;}
+table.dialog-edit .alert{margin-top: 15px; color: #9f352b; font-style: italic;  display: none}
+.formError{z-index: 9999}
+
+.filter select, .filter input[type=text]{margin-left: 5px; padding: 5px; font-size: 11px; font-style: italic}
+.filter span.ui-datepicker-append{display: none;}
+.filter .chzn-container{float: left; margin-right: 10px}
+
+.tip-alert{font-style: italic}
+p.loading{text-align: center}
+.noclose .ui-dialog-titlebar-close{display:none;}
+
+div.aclRow{float: left; margin: 5px; width: 230px}
+.component{text-align: center; margin-top: 30px;}
+
+.input-sku{text-transform: uppercase}
+
+a.cp{
+    background: #666;
+    color: #fff;
+    padding: 3px;
+    margin-left: 5px;
+    border-radius: 5px;
+    margin-bottom: 3px;
+    float: left;
+    font-size: 11px;
+}
+
+.form select{
+    background: white none repeat scroll 0 0;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 0 2px #f4f4f4;
+    color: #656565;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    padding: 7px 6px;
+}
+
+.nNote{margin-top: 10px}
+.sTable input[type=text]{
+    background: white none repeat scroll 0 0;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 0 2px #f4f4f4;
+    color: #656565;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    padding: 7px 6px;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.alert-box {
+    display: none;
+    position: fixed;
+    z-index: 99999999;
+    color: #777;
+    border-radius: 5px;
+    font-family: Tahoma, Geneva, Arial, sans-serif;
+    font-size: 11px;
+    padding: 10px 36px;
+    margin: 10px;
+    top: 50px;
+    left: 10px;
+    box-shadow: 1px 2px 5px #555555;
+}
+
+.alert-box span {
+    float: left;
+}
+
+.error {
+    background: #f2dede url('../../images/icons/error.png') no-repeat 10px 50%;
+    border: 1px solid #ebccd1;
+    color: #a94442;
+}
+
+.success {
+    background: #dff0d8 url('../../images/icons/success.png') no-repeat 10px 50%;
+    border: 1px solid #d6e9c6;
+    color: #3c763d;
+}
+
+.warning {
+    background: #fcf8e3 url('../../images/icons/warning.png') no-repeat 10px 50%;
+    border: 1px solid #faebcc;
+    color: #8a6d3b;
+}
+
+.notice {
+    background: #d9edf7 url('../../images/icons/notice.png') no-repeat 10px 50%;
+    border: 1px solid #bce8f1;
+    color: #31708f;
+}
+
+#notification_label{
+    margin-right: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#notification_close {
+    padding: 0;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+    -webkit-appearance: none;
+    float: right;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 15px;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .2;
+    filter: alpha(opacity=20);
+    position: absolute;
+    right: 10px;
+}
+
+input[type=text]:disabled { background: #ccc;}
+#divErrorMsg{font-size: 12px}

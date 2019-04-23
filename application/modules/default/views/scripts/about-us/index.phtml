@@ -1,0 +1,23 @@
+<?php echo $this->render('intro/common/header.phtml'); ?>
+<section>
+    <div class="breadrum-wrapper">
+        <a href="/"><?php echo $this->translate->_('admin_resource_homepage');?></a> /
+        <a href="<?php echo $this->configUrl($this->config, 'about_us');?>"><?php echo $this->translate->_('admin_resource_about_us');?></a> /
+        <strong class="active"><?php echo $this->title;?></strong>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="content-wrapper">
+                    <h3><?php echo $this->title;?></h3>
+                    <p><?php echo $this->content;?></p>
+                    <p><?php echo $this->render('layout/add-this.phtml');?></p>
+                </div>
+            </div>
+            <?php //echo $this->render('about-us/common/menu.phtml');?>
+        </div>
+    </div>
+</section>
+<?php echo $this->render('intro/common/footer.phtml'); ?>

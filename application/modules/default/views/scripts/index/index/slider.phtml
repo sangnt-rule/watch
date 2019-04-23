@@ -1,0 +1,26 @@
+<section class="section section-sliding">
+    <div class="home-slide">
+        <?php if ($this->moduleName == 'index') { ?>
+            <?php if ($this->sliderData) { ?>
+                <?php foreach ($this->sliderData as $data) { ?>
+                    <?php
+                    $image = HOST_UPLOAD . $data[DbTable_Slider::COL_SLIDER_IMAGE];
+                    $url = $data[DbTable_Slider::COL_SLIDER_URL];
+                    $title = $data[DbTable_Slider::COL_SLIDER_TITLE];
+                    ?>
+                    <div><a href="<?php echo $url;?>" title="<?php echo $title;?>"><img src="<?php echo $image;?>" alt="<?php echo $title;?>"></a></div>
+                <?php } ?>
+            <?php } ?>
+        <?php } else { ?>
+            <?php
+            $imagePath = isset($this->banner[DbTable_Banner::COL_BANNER_IMAGE]) ? $this->banner[DbTable_Banner::COL_BANNER_IMAGE] : null;
+            ?>
+            <?php if ($imagePath && $imagePath!='none') { ?>
+                <div><img src="<?php echo HOST_UPLOAD . '/'. $imagePath;?>"></div>
+            <?php } else { ?>
+                <div><img src="images/sliderx250/banner3.jpg"></div>
+            <?php } ?>
+        <?php } ?>
+    </div>
+</section>
+

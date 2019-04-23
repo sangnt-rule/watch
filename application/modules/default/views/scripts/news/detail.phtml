@@ -1,0 +1,55 @@
+<section>
+    <div class="key-point-wrapper">
+        <img src="images/child-bg.jpg" alt="">
+        <div class="black-cover"></div>
+        <div class="container">
+            <div class="key-point-content">
+                <h1><?php echo $this->translate->_('feel_protected_vacation');?></h1>
+                <p><?php echo $this->translate->_('understand_insurance_different_type');?></p>
+                <div class="row">
+                    <div class="col-sm-12 col-lg-6 col-lg-offset-3">
+                        <a target="_blank" href="/price-quote.html"><button class="btn btn-warning btn-block"><span><?php echo $this->translate->_('index_quote_online');?></span> <span class="mdi mdi-arrow-right-box"></span></button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="breadrum-wrapper">
+        <a href="/"><?php echo $this->translate->_('admin_resource_homepage');?></a> /
+        <a href="<?php echo $this->configUrl($this->config, 'news');?>"><?php echo $this->translate->_('admin_resource_news');?></a> /
+        <strong class="active"><?php echo $this->info['news_title'];?></strong>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-7 col-md-8">
+                <div class="content-wrapper">
+                    <h3><?php echo $this->info['news_title'];?></h3>
+                    <p><?php echo $this->info['news_content'];?></p>
+                    <p><?php echo $this->render('layout/add-this.phtml');?></p>
+                </div>
+            </div>
+            <?php echo $this->render('news/common/menu.phtml');?>
+        </div>
+    </div>
+</section>
+<!---->
+<!--<div class="list-container">-->
+<!--    <div class="row">-->
+<!--        --><?php //echo $this->render('news/common/menu.phtml');?>
+<!--        <div class="col-lg-9 col-md-8">-->
+<!--            <div class="main-detail">-->
+<!--                <div class="main-detail__head">-->
+<!--                    <div class="main-detail__dates">--><?php //echo $this->formatDateTime($this->createdAt);?><!--</div>-->
+<!--                    <span class="main-detail__title">--><?php //echo $this->title;?><!--</span>-->
+<!--                </div>-->
+<!--                <div>--><?php //echo $this->content;?><!--</div>-->
+<!--                --><?php //echo $this->render('layout/add-this.phtml');?>
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->

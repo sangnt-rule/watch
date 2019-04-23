@@ -1,0 +1,39 @@
+<?php if ($this->pageCount > 1): ?>
+    <nav class="clearfix">
+        <ul class="pagination pull-right">
+            <li>
+                <!-- Previous page link -->
+                <?php if (isset($this->previous)): ?>
+                    <a href="<?php echo $this->currentFullUrl(array('page' => $this->previous)); ?>">
+                        <span aria-hidden="true"><i class="fa fa-angle-left"></i></span>
+                    </a>
+                <?php else: ?>
+                    <span aria-hidden="true"><i class="fa fa-angle-left"></i></span>
+                <?php endif; ?>
+            </li>
+            <!-- Numbered page links -->
+            <?php foreach ($this->pagesInRange as $page): ?>
+                <li>
+                    <?php if ($page != $this->current): ?>
+                        <a href="<?php echo $this->currentFullUrl(array('page' => $page)); ?>">
+                            <?php echo $page; ?>
+                        </a>
+                    <?php else: ?>
+                        <a href="javascript:void(0)"><strong><?php echo $page; ?></strong></a>
+                    <?php endif; ?>
+                </li>
+            <?php endforeach; ?>
+            <li>...</li>
+            <li>
+                <!-- Next page link -->
+                <?php if (isset($this->next)): ?>
+                    <a href="<?php echo $this->currentFullUrl(array('page' => $this->next)); ?>">
+                        <span aria-hidden="true"><i class="fa fa-angle-right"></i></span>
+                    </a>
+                <?php else: ?>
+                    <span aria-hidden="true"><i class="fa fa-angle-right"></i></span>
+                <?php endif; ?>
+            </li>
+        </ul>
+    </nav>
+<?php endif; ?>

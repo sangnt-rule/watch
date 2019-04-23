@@ -1,0 +1,22 @@
+phpSettings.display_startup_errors = 1
+phpSettings.display_errors = 1
+
+env.name = "live"
+
+resources.multiDb.master.adapter = "pdo_mysql"
+resources.multiDb.master.host = "localhost"
+resources.multiDb.master.username = "savemone_sm"
+resources.multiDb.master.password = "S@veMnSM"
+resources.multiDb.master.dbname = "savemone_befintech"
+resources.multiDb.master.charset = "utf8"
+resources.multiDb.master.default = false
+
+resources.multiDb.slave.adapter = "pdo_mysql"
+resources.multiDb.slave.host = "localhost"
+resources.multiDb.slave.username = "savemone_sm"
+resources.multiDb.slave.password = "S@veMnSM"
+resources.multiDb.slave.dbname = "savemone_befintech"
+resources.multiDb.slave.charset = "utf8"
+resources.multiDb.slave.default = true
+
+resources.router.routes.admin_subdomain.route = "cms.befintech.vn"

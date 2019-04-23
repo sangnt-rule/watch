@@ -1,0 +1,52 @@
+<div class="modal fade" id="modalBooking" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel"><?php echo $this->translate->_('admin_common_full_name');?></h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" method="post" action="/index/insert-booking/" id="formBooking">
+                    <div class="form-group">
+                        <label for="booking_name" class="col-sm-3 hidden-xs control-label"><?php echo $this->translate->_('admin_common_full_name');?>(*)</label>
+                        <div class="col-xs-12 col-sm-9">
+                            <input type="text" class="form-control frm_t validate[required]" id="booking_name" name="fullName" placeholder="<?php echo $this->translate->_('admin_common_full_name');?>">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="booking_email" class="col-sm-3 hidden-xs control-label">Email(*)</label>
+                        <div class="col-xs-12 col-sm-9">
+                            <input type="email" class="form-control frm_t validate[required,custom[email]]" id="booking_email" name="email" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="booking_tel" class="col-sm-3 hidden-xs control-label"><?php echo $this->translate->_('admin_common_phone');?>(*)</label>
+                        <div class="col-xs-12 col-sm-9">
+                            <input type="text" class="form-control frm_t validate[required]" id="booking_tel" name="phone" placeholder="<?php echo $this->translate->_('admin_common_full_name');?>" maxlength="20">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="booking_add" class="col-sm-3 hidden-xs control-label"><?php echo $this->translate->_('layout_booking_address');?>(*)</label>
+                        <div class="col-xs-12 col-sm-9">
+                            <input type="text" class="form-control frm_t validate[required]" id="booking_add" name="address" placeholder="<?php echo $this->translate->_('layout_booking_address');?>">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="booking_note" class="col-sm-3 hidden-xs control-label"><?php echo $this->translate->_('layout_booking_note');?></label>
+                        <div class="col-xs-12 col-sm-9">
+                            <textarea class="form-control frm_t" rows="3" placeholder="<?php echo $this->translate->_('layout_booking_note');?>" name="note" id="booking_note"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12 text-center" id="booking-button">
+                            <button type="submit" class="btn_action block_inline"><?php echo $this->translate->_('layout_booking_button');?></button>
+                        </div>
+                        <div class="col-xs-12 text-center" id="booking-loading">
+                            <img src="images/bx_loader.gif" /> <?php echo $this->translate->_('layout_processing_title');?>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

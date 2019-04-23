@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+<header creationtoolversion="1.0.0" datatype="winres" segtype="sentence" adminlang="en-us" srclang="de-at" o-tmf="abc" creationtool="XYZTool" >
+</header>
+<body>
+	<tu tuid='admin_index_orders_statistic'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Thống kê đơn hàng]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Order Statistic]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_index_purchase_order_statistic'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Phiếu nhập hàng (PO)]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Purchase Order]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_index_package_statistic'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Gói hàng]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Package]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_index_item_statistic'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Hàng hóa]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Item]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_index_starting_point_note'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Chọn lựa kho tổng để xem được chi tiết các số liệu]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Please select Starting Point to see the statistic]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_index_'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[aaa]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[aaa]]></seg>
+		</tuv>
+	</tu>
+</body>

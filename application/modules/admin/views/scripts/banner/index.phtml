@@ -1,0 +1,101 @@
+<div class="wrapper">
+    <ul class="breadcrumbs">
+        <li><a href="/"><?php echo $this->translate->_('common_homepage');?></a> </li>
+        <li><?php echo $this->translate->_('admin_module_website_management');?></li>
+        <li><?php echo $this->translate->_('admin_resource_banner');?></li>
+        <li class="current"><?php echo $this->translate->_('admin_privilege_listing');?></li>
+    </ul>
+</div>
+<div class="wrapper">
+    <form method="get" action="">
+        <fieldset class="filter">
+            <?php echo $this->formSelect(
+                'locale',
+                $this->locale,
+                array(),
+                array(0 => sprintf('+ %s', $this->translate->_('common_select_all_locale'))) + $this->localeData
+            ); ?>
+            <?php echo $this->formSelect(
+                'a',
+                $this->activeId,
+                array(),
+                array(-1 => sprintf('+ %s', $this->translate->_('common_all_status'))) + $this->activeData
+            ); ?>
+            <input type="submit" value="<?php echo $this->translate->_('admin_common_search_button');?>" class="button greenB" />
+        </fieldset>
+    </form>
+</div>
+
+<div class="wrapper">
+    <div class="widget">
+        <div class="title">
+            <img src="images/icons/dark/frames.png" alt="" class="titleIcon" />
+            <h6><?php echo $this->pagination->getTotalItemCount(); ?> <?php echo $this->translate->_('admin_common_listing_row');?></h6>
+        </div>
+
+        <table cellpadding="0" cellspacing="0" width="100%" class="sTable withCheck mTable" id="checkAll">
+            <thead>
+            <tr>
+                <td class="titleIcon">
+                    <?php echo $this->formCheckbox(null, null, array('class' => 'check-all')); ?>
+                </td>
+                <td><?php echo $this->translate->_('admin_common_title');?></td>
+                <td><?php echo $this->translate->_('admin_common_image');?></td>
+                <td><?php echo $this->translate->_('admin_common_status');?></td>
+                <td style="width: 90px;"></td>
+            </tr>
+            </thead>
+            <tbody>
+            <?php foreach ($this->pagination as $data) {?>
+                <tr>
+                    <td>
+                        <?php echo $this->formCheckbox(
+                            null,
+                            $data->{DbTable_Banner::COL_BANNER_ID},
+                            array('class' => 'check-items')
+                        ); ?>
+                    </td>
+                    <td>
+                        <span class="module"><?php echo $data->{DbTable_Banner::COL_BANNER_NOTE}; ?></span>
+                        <p style="border-top:1px dotted #ccc; margin-top: 10px; padding-top: 10px">
+                            <div><strong>Title: </strong><?php echo $data->{DbTable_Banner::COL_BANNER_META_TITLE}; ?></div>
+                            <div><strong>Meta Keyword: </strong><?php echo $data->{DbTable_Banner::COL_BANNER_META_KEYWORD}; ?></div>
+                            <div><strong>Meta Description: </strong><?php echo $data->{DbTable_Banner::COL_BANNER_META_DESCRIPTION}; ?></div>
+                        </p>
+                    </td>
+                    <td>
+                        <?php $image = $data->{DbTable_Banner::COL_BANNER_IMAGE};?>
+                        <?php if ($image  && $image!='none') { ?>
+                            <img src="<?php echo HOST_UPLOAD .  $image; ?>" width="180px" >
+                        <?php } ?>
+
+                    </td>
+                    <td><?php echo $this->activeLabel($data->{DbTable_Banner::COL_FK_CONFIG_ACTIVE}); ?></td>
+                    <td>
+                        <a class="cp" href="/banner/edit/?i=<?php echo $data->{DbTable_Banner::COL_BANNER_ORIGINAL}; ?>">
+                            <?php echo $this->translate->_('admin_common_edit_button');?></a>
+                    </td>
+                </tr>
+            <?php } ?>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td colspan="99">
+                    <div class="itemActions">
+                        <select id="manualUpdateElement" class="uniform">
+                            <option value="">++</option>
+                            <option value="<?php echo Application_Constant_Module_Admin::ACTIVE_VALUE?>">
+                                Active
+                            </option>
+                            <option value="<?php echo Application_Constant_Module_Admin::INACTIVE_VALUE?>">
+                                InActive
+                            </option>
+                        </select>
+                    </div>
+                    <?php echo $this->pagination; ?>
+                </td>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+</div>

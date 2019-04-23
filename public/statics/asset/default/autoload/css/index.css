@@ -1,0 +1,13 @@
+
+a.text-decoration{
+    text-decoration: none;
+}
+.text-decoration-content{
+    color:#262626;
+}
+a.text-decoration :hover text-decoration-content{
+    color:#262626;
+}
+a.text-decoration :hover .text-decoration-header{
+    color: #fff;
+}

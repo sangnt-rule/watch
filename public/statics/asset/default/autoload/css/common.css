@@ -1,0 +1,19 @@
+.side-nav li.active{font-weight: bold}
+
+.list-block__image{height: 160px; overflow: hidden}
+.list-block__link{height: 40px; overflow: hidden}
+.news-sub-content{height: 120px; overflow: hidden}
+.list-sthumbnail__des{height: 100px; overflow: hidden}
+.list-sthumbnail__link{font-size: 12px;}
+.list-sthumbnail__item_link{margin-top: 10px}
+
+ul.main-nav > li {margin-right: 16px;}
+.list-block__title{font-size: 35px; text-align: center; text-transform: uppercase; font-weight: normal; color: #000000}
+.sub-footer-block__body a{color: #000}
+a:hover{text-decoration: underline}
+
+.section-main{background-color: #fff;}
+.list-brands a{background-color: #fff !important;}
+.section-how{background: #ccc;}
+.section-how .main-title {color: #000;}
+.section-how .main-panel__body{color: #000;}

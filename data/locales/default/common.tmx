@@ -1,0 +1,199 @@
+<?xml version="1.0" ?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+<header creationtoolversion="1.0.0" datatype="winres" segtype="sentence" adminlang="en-us" srclang="de-at" o-tmf="abc" creationtool="XYZTool" >
+</header>
+<body>
+	<tu tuid='travel_with_confidence_header'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[DU LỊCH VỚI TỰ TIN. <br> DU LỊCH VỚI CHÚNG TÔI]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[TRAVEL WITH CONFIDENCE. <br> TRAVEL WITH US.]]></seg>
+        </tuv>
+		<tuv xml:lang="zh">
+            <seg><![CDATA[信息]]></seg>
+        </tuv>
+    </tu>
+	<tu tuid='travel_with_confidence_body'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Bảo hiểm du lịch - Sự bảo vệ tối đa trong việc bảo vệ du lịch và hỗ trợ du lịch khẩn cấp.]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Travel Insurance - The Ultimate solution in travel protection and emergency travel assistance.]]></seg>
+        </tuv>
+		<tuv xml:lang="zh">
+            <seg><![CDATA[验证码]]></seg>
+        </tuv>
+    </tu>
+	<tu tuid='travel_with_confidence_content'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Chúng tôi biết, để có một kỳ nghỉ trọn vẹn bạn cần lên kế hoạch một cách kỹ lưỡng, chọn
+                          những dịch vụ và sản phẩm với giá cả hợp lý nhất. Từ đó, để mang đến bạn một kỳ nghỉ tuyệt
+                          vời, chúng tôi đã tạo ra những sản phẩm phù hợp nhất với bạn. <br>Nhấn “TÌM KIẾM NGAY” để lên
+                          kế hoạch cho kỳ nghỉ của bạn ngay nhé!]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[To have a full vacation, you need to plan carefully and choose the services and products with
+                          the most reasonable prices. Since then, in order to bring you a wonderful holiday, we have
+                          created the most suitable products for you. <br>Click "SEARCH NOW" to plan your holiday now!]]></seg>
+        </tuv>
+		<tuv xml:lang="zh">
+            <seg><![CDATA[发送]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='travel_with_confidence_button'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[TÌM KIẾM NGAY]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[SEARCH NOW]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[发送]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='feel_protected_vacation'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[KỲ NGHỈ TUYỆT VỚI CHO BẠN]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[YOUR WONDERFUL JOURNEY]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[发送]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='understand_insurance_different_type'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Tìm kiếm các tour du lịch, dịch vụ, vé máy bay... dành cho bạn với chi phí hợp lý nhất. Nhấn "KHÁM PHÁ NGAY" để tìm hiểu thêm nhé!]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Looking for travel packages, services, airplane tickets... with the best price for you. <br>Click "EXPLORE NOW" button for more information!]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[发送]]></seg>
+        </tuv>
+    </tu>
+     <tu tuid='common_phone'>
+            <tuv xml:lang="vi">
+                <seg><![CDATA[Số điện thoại]]></seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg><![CDATA[Phone number]]></seg>
+            </tuv>
+            <tuv xml:lang="zh">
+                <seg><![CDATA[发送]]></seg>
+            </tuv>
+     </tu>
+     <tu tuid='common_service'>
+         <tuv xml:lang="vi">
+             <seg><![CDATA[Dịch vụ]]></seg>
+         </tuv>
+         <tuv xml:lang="en">
+             <seg><![CDATA[Service]]></seg>
+         </tuv>
+         <tuv xml:lang="zh">
+             <seg><![CDATA[发送]]></seg>
+         </tuv>
+     </tu>
+     <tu tuid='common_travel_tickets'>
+          <tuv xml:lang="vi">
+              <seg><![CDATA[Vé du lịch]]></seg>
+          </tuv>
+          <tuv xml:lang="en">
+              <seg><![CDATA[Travel tickets]]></seg>
+          </tuv>
+          <tuv xml:lang="zh">
+              <seg><![CDATA[发送]]></seg>
+          </tuv>
+      </tu>
+       <tu tuid='common_hotel'>
+            <tuv xml:lang="vi">
+                <seg><![CDATA[Khách sạn]]></seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg><![CDATA[Hotel]]></seg>
+            </tuv>
+            <tuv xml:lang="zh">
+                <seg><![CDATA[发送]]></seg>
+            </tuv>
+        </tu>
+        <tu tuid='common_send_request_successfully'>
+            <tuv xml:lang="vi">
+                <seg><![CDATA[Gửi yêu cầu thành công]]></seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg><![CDATA[Send request successfully]]></seg>
+            </tuv>
+            <tuv xml:lang="zh">
+                <seg><![CDATA[发送]]></seg>
+            </tuv>
+        </tu>
+        <tu tuid='search_now'>
+            <tuv xml:lang="vi">
+                <seg><![CDATA[/tim-kiem-ngay.html]]></seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg><![CDATA[/search-now.html]]></seg>
+            </tuv>
+            <tuv xml:lang="zh">
+                <seg><![CDATA[发送]]></seg>
+            </tuv>
+        </tu>
+        <tu tuid='common_tour'>
+            <tuv xml:lang="vi">
+                <seg><![CDATA[Tour du lịch]]></seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg><![CDATA[Tour]]></seg>
+            </tuv>
+            <tuv xml:lang="zh">
+                <seg><![CDATA[发送]]></seg>
+            </tuv>
+        </tu>
+      <tu tuid='common_terms_conditions'>
+          <tuv xml:lang="vi">
+              <seg><![CDATA[Điều khoản & Điều kiện]]></seg>
+          </tuv>
+          <tuv xml:lang="en">
+              <seg><![CDATA[Terms & Conditions]]></seg>
+          </tuv>
+          <tuv xml:lang="zh">
+              <seg><![CDATA[发送]]></seg>
+          </tuv>
+      </tu>
+      <tu tuid='common_privacy_policy'>
+            <tuv xml:lang="vi">
+                <seg><![CDATA[Chính sách bảo mật]]></seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg><![CDATA[Privacy Policy]]></seg>
+            </tuv>
+            <tuv xml:lang="zh">
+                <seg><![CDATA[发送]]></seg>
+            </tuv>
+        </tu>
+     <tu tuid='common_careers'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Nghề nghiệp]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Careers]]></seg>
+        </tuv>
+        <tuv xml:lang="zh">
+            <seg><![CDATA[发送]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='common_travel_services'>
+            <tuv xml:lang="vi">
+                <seg><![CDATA[Dịch vụ du lịch]]></seg>
+            </tuv>
+            <tuv xml:lang="en">
+                <seg><![CDATA[Travel services]]></seg>
+            </tuv>
+            <tuv xml:lang="zh">
+                <seg><![CDATA[发送]]></seg>
+            </tuv>
+    </tu>
+</body>

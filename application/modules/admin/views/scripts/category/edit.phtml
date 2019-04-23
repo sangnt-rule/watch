@@ -1,0 +1,69 @@
+<div class="breadcrumbs">
+    <div class="col-sm-8">
+        <div class="page-header float-left">
+            <div class="page-title">
+                <ol class="breadcrumb text-right">
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="/category">Danh mục</a></li>
+                    <li class="active">Chỉnh sửa</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <div class="col-sm-6">
+                    <a href="/category"><button class="btn btn-success btn-sm">Danh sách</button></a>
+                </div>
+            </div>
+            <form action="/category/submit-edit" id="validate" target="ifrmEdit" method="post" class="form-horizontal">
+                <div class="card-body card-block">
+                        <div class="row form-group">
+                            <div class="col col-md-3">
+                                <label for="hf-email" class=" form-control-label">Danh mục : </label>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <input type="text" name="category" placeholder="Danh mục..." class="form-control validate[required]">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col col-md-3">
+                                <label for="hf-password" class=" form-control-label">Thứ tự :</label>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <input type="text" name="location" placeholder="Thứ tự..." class="form-control">
+                            </div>
+                        </div>
+                    <div class="row form-group">
+                        <div class="col col-md-3">
+                            <label for="hf-password" class=" form-control-label">Thứ tự :</label>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <?php echo $this->formTextarea(
+                                sprintf('content_%d', 1),
+                                null,
+                                array('class' => 'validate[required] fck')
+                            ); ?>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa fa-dot-circle-o"></i> Submit
+                    </button>
+                    <button type="reset" class="btn btn-danger">
+                        <i class="fa fa-ban"></i> Reset
+                    </button>
+                </div>
+            </form>
+            <iframe name="ifrmEdit" id="ifrmEdit" style="display:none"></iframe>
+            <div id="model_alert" title="<?php echo $this->translate->_('common_alert_title');?>" class="dialog-box">
+                <p id="contentAlert"></p>
+            </div>
+        </div>
+    </div>
+</div>

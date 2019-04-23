@@ -1,0 +1,69 @@
+<?php if ($this->aboutUsData) { ?>
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <h1 class="section-title"><?php echo $this->translate->_('admin_resource_about_us');?></h1>
+                <hr class="hr-tittle">
+            </div>
+        </div>
+        <div class="why-wrapper mt-50">
+            <?php
+                $i = 1;
+                foreach ($this->aboutUsData as $data) {
+            ?>
+            <?php
+            $imagePath = $data[DbTable_About_Us_Category::COL_ABOUT_US_CATEGORY_IMAGE];
+            $thumbnail = null;
+            if ($imagePath) {
+                #$thumbnail = $this->thumb($imagePath, 261);
+                $thumbnail = HOST_UPLOAD . '/' . $imagePath;
+            }
+            $title = $data[DbTable_About_Us_Category::COL_ABOUT_US_CATEGORY_NAME];
+            $subContent = $data[DbTable_About_Us_Category::COL_ABOUT_US_CATEGORY_SUB_CONTENT];
+            $url = $this->aboutUsCategoryUrl($data[DbTable_About_Us_Category::COL_ABOUT_US_CATEGORY_ID], $title);
+            $imageLink = $data[DbTable_About_Us_Category::COL_ABOUT_US_CATEGORY_IMAGE_LINK];
+            $url = $imageLink ? $imageLink : $url;
+            $target = $imageLink ? '_blank' : '_self';
+            ?>
+                <?php
+                   if($i%2==0){
+                ?>
+                   <hr>
+                   <div class="row">
+                       <div class="col-sm-7 col-md-9 mb-15-xs">
+                           <a href="<?php echo $url?>" title="<?php echo $title;?>"><h3><?php echo $title;?></h3></a>
+                           <p><?php echo $subContent;?></p>
+                       </div>
+                       <div class="col-sm-5 col-md-3">
+                           <a href="<?php echo $url;?>" title="<?php echo $title;?>" target="<?php echo $target;?>">
+                               <img  src="<?php echo $thumbnail;?>" alt="">
+                           </a>
+                       </div>
+                   </div>
+
+
+                       <?php } else{
+                         if($i!=1){
+                            echo "<hr>";
+                         }
+                       ?>
+                       <div class="row">
+                           <div class="col-sm-5 col-md-3 mb-15-xs">
+                               <a href="<?php echo $url;?>" title="<?php echo $title;?>" target="<?php echo $target;?>">
+                                   <img src="<?php echo $thumbnail;?>" alt="">
+                               </a>
+                           </div>
+                           <div class="col-sm-7 col-md-9">
+                               <a href="<?php echo $url?>" title="<?php echo $title;?>"><h3><?php echo $title;?></h3></a>
+                               <p><?php echo $subContent;?></p>
+                           </div>
+                       </div>
+
+                       <?php } ?>
+            <?php $i++; } ?>
+        </div>
+    </div>
+</section>
+<?php } ?>
+

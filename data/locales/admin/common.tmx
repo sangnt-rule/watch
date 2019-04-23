@@ -1,0 +1,344 @@
+<?xml version="1.0" ?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+<header creationtoolversion="1.0.0" datatype="winres" segtype="sentence" adminlang="en-us" srclang="de-at" o-tmf="abc" creationtool="XYZTool" >
+</header>
+<body>
+    <tu tuid='admin_common_error'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[LỖI]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Error]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_listing_row'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[dòng(s)]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[row(s)]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_created_at'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Ngày tạo]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Created At]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_updated_at'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Cập nhật lúc]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Updated At]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_edit_button'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Cập nhật]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Edit]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_select_all'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Chọn tất cả]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Select All]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_search_button'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Tìm kiếm]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Search]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_status'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Tình trạng]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Status]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_manual_update'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Cập nhật hàng loạt]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Manual update]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_choose_default'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[+ Chọn]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[+ Choose]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_warning'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[CHÚ Ý]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[WARNING]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_priority'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Thứ tự]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Priority]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_guide'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[HƯỚNG DẪN]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[INSTRUCTION]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_add_new_bt'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Thêm mới]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Add new]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_created_by'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Tạo bởi]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Created By]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_title'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Tiêu đề]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Title]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_content'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Nội dung]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Content]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_priority_note'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Dữ liệu sẽ càng <strong>ưu tiên hiển thị</strong> với giá trị <strong>càng lớn</strong>.]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[The data will be prioritized with the higher value.]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_sub_content'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Mô tả ngắn]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Sub Content]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_image'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Hình ảnh]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Image]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_news_category'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Danh mục]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Category]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_display_homepage'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Trang chủ]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Homepage]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_display_homepage_text'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Hiển thị trang chủ]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Display on Homepage]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_un_display_homepage_text'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Ngừng hiển thị trang chủ]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Do not display on Homepage]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_upload_file_null'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Tập tin tải lên không hợp lệ. Vui lòng điều chỉnh.]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Uploaded file is not valid. Please double check.]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_address'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Địa chỉ]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Address]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_website'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Trang web]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Website]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_about_us_sub_content_guide'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Thông tin này sẽ hiển thị ở trang chủ nếu bạn chọn thuộc tính <strong>"Trang chủ"</strong> cho đơn vị dữ liệu này.]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[This content would be display on home page if you set <strong>"Homepage"</strong> for this data]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_question'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Câu hỏi]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Question]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_answer'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Trả lời]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Answer]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_sub_category'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Danh mục con]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Sub Category]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_post'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Bài viết]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Post]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_expired_at'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Hết hạn]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Expired At]]></seg>
+		</tuv>
+		<tuv xml:lang="zh">
+			<seg><![CDATA[在过期]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_full_name'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Họ và Tên]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Full Name]]></seg>
+		</tuv>
+		<tuv xml:lang="zh">
+			<seg><![CDATA[全名]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_phone'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Điện thoại]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Phone]]></seg>
+		</tuv>
+		<tuv xml:lang="zh">
+			<seg><![CDATA[电话]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_replied'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Phản hồi]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Replied]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_image_news_guide'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Kích thước yêu cầu <strong>530 x 356</strong>]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Dimension regular <strong>530 x 356</strong>]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_image_slider_guide'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Kích thước yêu cầu <strong>1903 x 700</strong>]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Dimension regular <strong>1903 x 700</strong>]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_image_banner_guide'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Kích thước yêu cầu <strong>1903 x 502</strong>]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Dimension regular <strong>1903 x 502</strong>]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_common_schedule_date'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Ngày đua]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Schedule date]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='admin_common_event_date'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Ngày diễn ra sự kiện]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Event date]]></seg>
+        </tuv>
+    </tu>
+</body>

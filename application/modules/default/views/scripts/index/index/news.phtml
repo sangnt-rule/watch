@@ -1,0 +1,67 @@
+<?php //if ($this->sponsorNewsData) { ?>
+<!--    <div class="list-container">-->
+<!--        <div class="list-block">-->
+<!--            <div class="list-block__title">--><?php //echo $this->translate->_('    admin_resource_news');?><!--</div>-->
+<!--            <div class="row">-->
+<!--                --><?php //foreach ($this->sponsorNewsData as $data) { ?>
+<!--                    --><?php
+//                    $createdAt = $data[DbTable_News::COL_NEWS_CREATED_AT];
+//                    $imagePath = $data[DbTable_News::COL_NEWS_IMAGE];
+//                    $thumbnail = null;
+//                    if ($imagePath) {
+//                        $thumbnail = $this->thumb($imagePath, 288);
+//                    }
+//                    $title = $data[DbTable_News::COL_NEWS_TITLE];
+//                    $subContent = $data[DbTable_News::COL_NEWS_SUB_CONTENT];
+//                    $url = $this->newsUrl($data[DbTable_News::COL_NEWS_ID], $title);
+//                    ?>
+<!--                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">-->
+<!--                        <div class="list-block__item">-->
+<!--                            <a href="--><?php //echo $url;?><!--" class="list-block__image" title="--><?php //echo $title?><!--"><img src="--><?php //echo $thumbnail;?><!--" alt="--><?php //echo $title?><!--"></a>-->
+<!--                            <a href="--><?php //echo $url;?><!--" class="list-block__link">--><?php //echo $title?><!--</a>-->
+<!--                            <div class="list-block__date">--><?php //echo $this->formatDateTime($createdAt);?><!--</div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                --><?php //} ?>
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<?php //}?>
+<?php if ($this->sponsorNewsData) { ?>
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h1 class="section-title"><?php echo $this->translate->_('admin_resource_news');?></h1>
+        <hr class="hr-tittle">
+    </div>
+</div>
+<div class="travelling-news mt-50">
+    <div class="row">
+        <?php foreach ($this->sponsorNewsData as $data) { ?>
+        <?php
+        $createdAt = $data[DbTable_News::COL_NEWS_CREATED_AT];
+        $imagePath = $data[DbTable_News::COL_NEWS_IMAGE];
+        $thumbnail = null;
+        if ($imagePath) {
+
+            $thumbnail = $this->thumb($imagePath, 288);
+        }
+        $title = $data[DbTable_News::COL_NEWS_TITLE];
+        $subContent = $data[DbTable_News::COL_NEWS_SUB_CONTENT];
+        $url = $this->newsUrl($data[DbTable_News::COL_NEWS_ID], $title);
+        ?>
+        <article class="item col-xs-12 col-sm-6 col-md-3 mb-30-xs mb-30-xs-sm">
+            <div class="item_content">
+                <figure class="item_img">
+                    <a href="<?php echo $url;?>" title="<?php echo $title?>"><img src="<?php echo $thumbnail;?>" alt="<?php echo $title?>"></a>
+                </figure>
+                <h4 class="item_title"><a href="<?php echo $url;?>"><?php echo $title?></a></h4>
+                <div class="item_introtext">
+                    <span class="mdi mdi-calendar-clock"></span> <span><?php echo $this->formatDateTime($createdAt);?></span>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </article>
+        <?php } ?>
+    </div>
+</div>
+<?php }?>

@@ -1,0 +1,23 @@
+<?php if ($this->newsSponsorData) { ?>
+    <div class="index_side hidden-xs">
+        <div class="index_side_cont">
+            <ul>
+                <?php foreach ($this->newsSponsorData as $data) { ?>
+                    <?php
+                    $id = $data[DbTable_News::COL_NEWS_ID];
+                    $title = $data[DbTable_News::COL_NEWS_TITLE];
+                    $image = $data[DbTable_News::COL_NEWS_IMAGE];
+                    $subContent = $data[DbTable_News::COL_NEWS_SUB_CONTENT];
+                    ?>
+                    <li>
+                        <a href="<?php echo $this->newsUrl($id, $title);?>" class="index_link_hover_a" title="<?php echo $title;?>">
+                            <img src="<?php echo HOST_UPLOAD . $image?>" class="img-responsive center-block" alt="<?php echo $title;?>">
+                            <i class="fa fa-link" aria-hidden="true"></i>
+                        </a>
+                        <p class="pl20"><?php echo $title;?></p>
+                    </li>
+                <?php } ?>
+            </ul>
+        </div>
+    </div>
+<?php }  ?>

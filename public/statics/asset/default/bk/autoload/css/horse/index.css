@@ -1,0 +1,35 @@
+.horse thead{font-weight: bold; background: #34738d; color: #fff; text-transform: uppercase; text-align: center}
+.horse td{padding: 10px 5px;}
+.horse td{
+    border: 0.5px solid #444;
+}
+.horse .score{padding: 8px 18px; background: #ccbb06; color:#333; cursor: pointer; text-decoration: none; border-radius:5px;}
+
+.popup{display: none; padding: 5px;}
+
+.info{height: 350px; overflow: scroll}
+.info .l{float: left; width: 49%; padding-top: 25px;}
+.info .l .horse{font-size: 16px; font-weight: bolder; text-transform: uppercase; text-align: center}
+.info .l .owner{font-size: 13px; font-weight: bolder; font-style: italic; text-align: center}
+.info .r{float: left; width: 49%; margin-left: 10px}
+.info .r .title{
+    text-transform: uppercase;
+    padding: 10px 0px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    background: #1c3e4d;
+    margin-top: 22px;
+    margin-left: 10px;
+}
+.info .r .content{padding: 5px; border: 1px solid #ccc; border-radius:5px; margin: 10px 0px;}
+.info .r .type{
+    font-weight: bold;
+    font-size: 40px;
+    padding: 10px 25px;
+    background: #ccbb06;
+    border-radius:100%;
+    float: left;
+    width:80px;
+    height: 80px;
+}

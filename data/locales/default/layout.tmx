@@ -1,0 +1,152 @@
+<?xml version="1.0" ?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+<header creationtoolversion="1.0.0" datatype="winres" segtype="sentence" adminlang="en-us" srclang="de-at" o-tmf="abc" creationtool="XYZTool" >
+</header>
+<body>
+	<tu tuid='layout_processing'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[
+				Hệ thống đang xử lý, xin vui lòng chờ trong giây lát...
+			]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[
+				System is processing your request, please wait in few seconds...
+			]]></seg>
+        </tuv>
+    </tu>
+	<tu tuid='layout_manual_update_alert'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[
+				<p>Để thực hiện chức năng này, bạn hãy chọn ít nhất 1 đơn vị dữ liệu.</p>
+				<p class="tip-alert">"Hãy đánh dấu dữ liệu muốn thay đổi bằng cách click vào ô vuông ở cột đầu tiên".</p>
+			]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[
+				<p>Please select something to process this feature.</p>
+				<p class="tip-alert">"You can select the item by clicking on the check-box in the first column".</p>
+			]]></seg>
+        </tuv>
+    </tu>
+	<tu tuid='layout_manual_update_alert_title'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Thông báo từ hệ thống]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[System response]]></seg>
+        </tuv>
+    </tu>
+	<tu tuid='layout_processing_title'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Hệ thống đang xử lý]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[The system is processing]]></seg>
+        </tuv>
+    </tu>
+	<tu tuid='layout_change_password'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Đổi mật khẩu]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Change password]]></seg>
+        </tuv>
+    </tu>
+	<tu tuid='layout_menu_library'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Thư viện]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Library]]></seg>
+        </tuv>
+		<tuv xml:lang="zh">
+            <seg><![CDATA[图书馆]]></seg>
+        </tuv>
+    </tu>
+	<tu tuid='layout_menu_booking'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Đặt vé]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Booking]]></seg>
+        </tuv>
+		<tuv xml:lang="zh">
+            <seg><![CDATA[预订]]></seg>
+        </tuv>
+    </tu>
+	<tu tuid='layout_news_sponsor'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Tin nổi bật]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[What's hot]]></seg>
+        </tuv>
+		<tuv xml:lang="zh">
+            <seg><![CDATA[什么比较流行]]></seg>
+        </tuv>
+    </tu>
+	<tu tuid='layout_promotion'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Khuyến mãi hấp dẫn]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Promotion]]></seg>
+        </tuv>
+		<tuv xml:lang="zh">
+            <seg><![CDATA[提升]]></seg>
+        </tuv>
+    </tu>
+	<tu tuid='layout_booking_address'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Địa chỉ nhận vé]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Shipping Address]]></seg>
+        </tuv>
+		<tuv xml:lang="zh">
+            <seg><![CDATA[邮寄地址]]></seg>
+        </tuv>
+    </tu>
+	<tu tuid='layout_booking_note'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Ghi chú]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Note]]></seg>
+        </tuv>
+		<tuv xml:lang="zh">
+            <seg><![CDATA[注意]]></seg>
+        </tuv>
+    </tu>
+
+    <tu tuid='layout_footer'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Copyright @ 2018 Asset Assurance Việt Nam. All rights reserved]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Copyright @ 2018 Asset Assurance Vietnam. All rights reserved]]></seg>
+        </tuv>
+		<tuv xml:lang="zh">
+            <seg><![CDATA[注意]]></seg>
+        </tuv>
+    </tu>
+	
+    <tu tuid='layout_event_coming'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[SỰ KIỆN SẮP DIỄN RA]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Event coming]]></seg>
+        </tuv>
+    </tu>
+     <tu tuid='layout_select_language'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Vui lòng chọn ngôn ngữ]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Please select language]]></seg>
+        </tuv>
+     </tu>
+</body>

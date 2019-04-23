@@ -1,0 +1,39 @@
+<!-- images banner -->
+<?php echo $this->render('intro/common/header.phtml'); ?>
+<section>
+    <div class="breadrum-wrapper">
+         <a href="/"><?php echo $this->translate->_('admin_resource_homepage');?></a> /
+         <a href="<?php echo $this->configUrl($this->config, 'intro');?>"><?php echo $this->translate->_('admin_resource_intro');?></a> /
+        <strong class="active"><?php echo $this->title;?></strong>
+    </div>
+</section>
+<section class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-7 col-md-8">
+                <div class="content-wrapper">
+                    <h3><?php echo $this->title;?></h3>
+                    <p><?php echo $this->content;?></p>
+                    <p><?php echo $this->render('layout/add-this.phtml');?></p>
+                </div>
+            </div>
+            <?php echo $this->render('intro/common/menu.phtml');?>
+        </div>
+    </div>
+</section>
+<?php echo $this->render('intro/common/footer.phtml'); ?>
+<!--<div class="list-container">-->
+<!--    <div class="row">-->
+<!--        --><?php //echo $this->render('intro/common/menu.phtml');?>
+<!--        <div class="col-lg-9 col-md-8">-->
+<!--            <div class="main-detail">-->
+<!--                <div class="main-detail__head">-->
+<!--                    <!--<div class="main-detail__dates">15:31 12/05/2017</div>-->
+<!--                    <span class="main-detail__title">--><?php //echo $this->title;?><!--</span>-->
+<!--                </div>-->
+<!--                <div>--><?php //echo $this->content;?><!--</div>-->
+<!--                --><?php //echo $this->render('layout/add-this.phtml');?>
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->

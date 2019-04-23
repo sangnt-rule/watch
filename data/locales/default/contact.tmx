@@ -1,0 +1,75 @@
+<?xml version="1.0" ?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+<header creationtoolversion="1.0.0" datatype="winres" segtype="sentence" adminlang="en-us" srclang="de-at" o-tmf="abc" creationtool="XYZTool" >
+</header>
+<body>
+	<tu tuid='contact_intro'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[
+				Lạc Cảnh Đại Nam Văn Hiến xin trân trọng cám ơn quý khách hàng đã quan tâm và liên lạc với chúng tôi.<br>
+                Mọi ý kiến đóng góp của quý khách hàng sẽ được chúng tôi trân trọng tiếp nhận và xử lí trong thời gian sớm nhất.
+			]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[
+				
+			]]></seg>
+        </tuv>
+    </tu>
+	<tu tuid='contact_message'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Thông tin]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Message]]></seg>
+        </tuv>
+		<tuv xml:lang="zh">
+            <seg><![CDATA[信息]]></seg>
+        </tuv>
+    </tu>
+	<tu tuid='contact_validation_code'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Mã an toàn]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Validation Code]]></seg>
+        </tuv>
+		<tuv xml:lang="zh">
+            <seg><![CDATA[验证码]]></seg>
+        </tuv>
+    </tu>
+	<tu tuid='contact_bt_send'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Gửi]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Send]]></seg>
+        </tuv>
+		<tuv xml:lang="zh">
+            <seg><![CDATA[发送]]></seg>
+        </tuv>
+    </tu>
+	<tu tuid='contact_comment_done_title'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Thông tin góp ý đã được gửi thành công]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Your message has been sent successfully.]]></seg>
+        </tuv>
+		<tuv xml:lang="zh">
+            <seg><![CDATA[您的留言已成功发送。]]></seg>
+        </tuv>
+    </tu>
+	<tu tuid='contact_comment_done_title'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Xin cảm ơn. Thông tin đóng góp ý kiến của quý khách đã được ghi nhận và gửi đến quản trị viên. Chúc quý khách một ngày tốt lành và nhiều sức khỏe.]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Thank you. Information contributed your comments have been noted and sent to administrators. Have a good day and good health.]]></seg>
+        </tuv>
+		<tuv xml:lang="zh">
+            <seg><![CDATA[谢谢。信息贡献您的意见已注意到并发送至管理员。有一个好的一天，身体健康。]]></seg>
+        </tuv>
+    </tu>
+</body>

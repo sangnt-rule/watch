@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+<header creationtoolversion="1.0.0" datatype="winres" segtype="sentence" adminlang="en-us" srclang="de-at" o-tmf="abc" creationtool="XYZTool" >
+</header>
+<body>
+	<tu tuid='admin_index_header'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Administration - Danh sách quản trị viên]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Administration - Listing]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_index_full_name'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Họ và tên]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Full name]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_index_last_login'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Đăng nhập lần cuối]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Last login]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_index_last_ip'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[IP đăng nhập]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[Ip login]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_index_'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[aaa]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[aaa]]></seg>
+		</tuv>
+	</tu>
+</body>

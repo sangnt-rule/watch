@@ -1,0 +1,114 @@
+<div class="wrapper">
+    <ul class="breadcrumbs">
+        <li><a href="/"><?php echo $this->translate->_('common_homepage');?></a> </li>
+        <li><?php echo $this->translate->_('admin_module_website_management');?></li>
+        <li><?php echo $this->translate->_('admin_resource_banner');?></li>
+        <li><a href="/banner"><?php echo $this->translate->_('admin_privilege_listing');?></a></li>
+        <li class="current">
+            <?php if (!$this->data) {
+                echo $this->translate->_('admin_privilege_add_new');
+            } else {
+                echo $this->translate->_('admin_privilege_update');
+            } ?>
+        </li>
+    </ul>
+</div>
+<div class="wrapper">
+    <form id="validate" class="form" method="post" target="ifrmEdit" action="/banner/submit-edit" enctype="multipart/form-data">
+        <div class="widget">
+            <ul class="tabs">
+                <?php foreach ($this->localeData as $id => $name) { ?>
+                    <li><a href="#tab_<?php echo $id;?>"><?php echo $name;?></a></li>
+                <?php } ?>
+            </ul>
+            <div class="tab_container">
+                <?php foreach ($this->result as $data) { ?>
+                    <?php
+                    $localeId = $data[DbTable_Locale::COL_LOCALE_ID];
+                    $dataInfo = $data[Application_Constant_Module_Admin::DATA];
+                    ?>
+                    <div id="tab_<?php echo $localeId;?>" class="tab_content">
+                        <fieldset>
+                            <div class="formRow">
+                                <label><?php echo $this->translate->_('admin_common_title');?>:<span class="req">*</span></label>
+                                <div class="formRight">
+                                    <?php if ($this->isAdminRoot) { ?>
+                                        <?php echo $this->formText(
+                                            sprintf('note_%d', $localeId),
+                                            $dataInfo ? $dataInfo[DbTable_Banner::COL_BANNER_NOTE] : null
+                                        ); ?>
+                                    <?php } else { ?>
+                                        <strong><?php echo $dataInfo[DbTable_Banner::COL_BANNER_NOTE]; ?></strong>
+                                        <?php echo $this->formHidden(
+                                            sprintf('note_%d', $localeId),
+                                            $dataInfo ? $dataInfo[DbTable_Banner::COL_BANNER_NOTE] : null
+                                        );?>
+                                    <?php } ?>
+
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="formRow">
+                                <label><?php echo $this->translate->_('admin_common_image');?>:<span class="req">*</span></label>
+                                <div class="formRight">
+                                    <input type="file" name="<?php echo sprintf('file_'. $localeId)?>">
+                                    <?php echo $this->formHidden(
+                                        sprintf('image_%d', $localeId),
+                                        $dataInfo ? $dataInfo[DbTable_Banner::COL_BANNER_IMAGE] : null,
+                                        array('class' => 'validate[required]')
+                                    ); ?>
+                                    <?php if ($dataInfo && $dataInfo[DbTable_Banner::COL_BANNER_IMAGE] && $dataInfo[DbTable_Banner::COL_BANNER_IMAGE]!='none') { ?>
+                                        <p><img src="<?php echo HOST_UPLOAD .  $dataInfo[DbTable_Banner::COL_BANNER_IMAGE];?>" width="300px" ></p>
+                                    <?php } ?>
+                                    <div class="nNote nInformation">
+                                        <p><strong>INFORMATION: </strong><?php echo $this->translate->_('admin_image_banner_guide');?></p>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="formRow">
+                                <label>Meta Title:<span class="req">*</span></label>
+                                <div class="formRight">
+                                    <?php echo $this->formText(
+                                        sprintf('metaTitle_%d', $localeId),
+                                        $dataInfo ? $dataInfo[DbTable_Banner::COL_BANNER_META_TITLE] : null
+                                    ); ?>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="formRow">
+                                <label>Meta Description:<span class="req">*</span></label>
+                                <div class="formRight">
+                                    <?php echo $this->formText(
+                                        sprintf('metaDescription_%d', $localeId),
+                                        $dataInfo ? $dataInfo[DbTable_Banner::COL_BANNER_META_DESCRIPTION] : null
+                                    ); ?>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="formRow">
+                                <label>Meta Keyword:<span class="req">*</span></label>
+                                <div class="formRight">
+                                    <?php echo $this->formText(
+                                        sprintf('metaKeyword_%d', $localeId),
+                                        $dataInfo ? $dataInfo[DbTable_Banner::COL_BANNER_META_KEYWORD] : null
+                                    ); ?>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <?php echo $this->formHidden(
+                                sprintf('id_%d', $localeId),
+                                $dataInfo ? $dataInfo[DbTable_Banner::COL_BANNER_ID] : null
+                            );?>
+                        </fieldset>
+                    </div>
+                <?php } ?>
+            </div>
+            <div class="clear"></div>
+            <div class="formSubmit">
+                <input type="submit" value="<?php echo $this->translate->_('admin_common_edit_button');?>" class="redB" />
+            </div>
+        </div>
+    </form>
+    <iframe name="ifrmEdit" id="ifrmEdit" style="display:none"></iframe>
+</div>

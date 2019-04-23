@@ -1,0 +1,4 @@
+<script type="text/javascript">
+    var jsonProvince = <?php echo json_encode(Admin_Model_RegionProvince::getInstance()->getAll());?>;
+    var jsonDistrict = <?php echo json_encode(Admin_Model_RegionDistrict::getInstance()->getAll());?>;
+</script>

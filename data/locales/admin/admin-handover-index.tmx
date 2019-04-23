@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+<!DOCTYPE tmx SYSTEM "tmx14.dtd">
+<tmx version="1.4">
+<header creationtoolversion="1.0.0" datatype="winres" segtype="sentence" adminlang="en-us" srclang="de-at" o-tmf="abc" creationtool="XYZTool" >
+</header>
+<body>
+	<tu tuid='admin_handover_date_from'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Từ ngày]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[From date]]></seg>
+		</tuv>
+	</tu>
+	<tu tuid='admin_handover_date_to'>
+		<tuv xml:lang="vi">
+			<seg><![CDATA[Đến ngày]]></seg>
+		</tuv>
+		<tuv xml:lang="en">
+			<seg><![CDATA[To date]]></seg>
+		</tuv>
+	</tu>
+
+    <tu tuid='admin_handover_id'>
+        <tuv xml:lang="vi">
+        <seg><![CDATA[ID]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+        <seg><![CDATA[ID]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='admin_handover_user_created'>
+        <tuv xml:lang="vi">
+        <seg><![CDATA[Quản trị viên tạo]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+        <seg><![CDATA[Admin created]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='admin_handover_created_at'>
+        <tuv xml:lang="vi">
+        <seg><![CDATA[Ngày tạo]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+        <seg><![CDATA[Created At]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='admin_handover_status'>
+        <tuv xml:lang="vi">
+        <seg><![CDATA[Tình trạng]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+        <seg><![CDATA[Status]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='admin_handover_total_package'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[Tổng số gói hàng]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Total Package]]></seg>
+        </tuv>
+    </tu>
+    <tu tuid='admin_handover_print'>
+        <tuv xml:lang="vi">
+            <seg><![CDATA[In]]></seg>
+        </tuv>
+        <tuv xml:lang="en">
+            <seg><![CDATA[Print]]></seg>
+        </tuv>
+    </tu>
+</body>

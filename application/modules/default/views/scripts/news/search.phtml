@@ -1,0 +1,51 @@
+<div class="" id="breadcrumb">
+    <div class="container">
+        <ul class="clearfix">
+            <li class="breadcrumb_home">
+                <a href="<?php echo $this->configUrl($this->config, 'news');?>">
+                    <i class="fa fa-home" aria-hidden="true"></i> <?php echo $this->translate->_('admin_resource_news');?> </a>
+            </li>
+            <li><span><?php echo $this->translate->_('common_search');?></span></li>
+        </ul>
+        <a data-toggle="collapse" href="#sub_menu_item_collapse" aria-expanded="false" aria-controls="sub_menu_item_collapse" class="hidden-sm hidden-md hidden-lg collapsed" id="breadcrumb_btn_sub_menu"><i class="fa fa-caret-down" aria-hidden="true"></i></a>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-3" id="side_left">
+            <p class="title_sub_menu hidden-xs"><?php echo $this->translate->_('admin_resource_news');?></p>
+            <?php echo $this->render('news/common/menu.phtml');?>
+            <?php echo $this->render('layout/page-news-sponsor.phtml');?>
+        </div>
+
+        <div class="col-xs-12 col-sm-9" id="page_container">
+            <?php if ($this->pagination->getTotalItemCount()) { ?>
+                <ul class="listing_cont">
+                    <?php foreach ($this->pagination as $data) { ?>
+                        <li class="row0">
+                            <div class="col-sm-4 col-xs-12 listing_cont_img">
+                                <a class="" title="<?php echo $data->{DbTable_News::COL_NEWS_TITLE};?>" href="<?php echo $this->newsUrl($data->{DbTable_News::COL_NEWS_ID}, $data->{DbTable_News::COL_NEWS_TITLE});?>">
+                                    <img src="<?php echo HOST_UPLOAD . $data->{DbTable_News::COL_NEWS_IMAGE}; ?>" alt="<?php echo $data->{DbTable_News::COL_NEWS_TITLE};?>" class="img-responsive">
+                                </a>
+                            </div>
+                            <div class="col-sm-8 col-xs-12 listing_cont_box">
+                                <div class="listing_cont_box">
+                                    <p class="listing_cont_title"><?php echo $data->{DbTable_News::COL_NEWS_TITLE};?></p>
+                                    <p class="listing_cont_cont"><?php echo $data->{DbTable_News::COL_NEWS_SUB_CONTENT};?></p>
+                                    <a href="<?php echo $this->newsUrl($data->{DbTable_News::COL_NEWS_ID}, $data->{DbTable_News::COL_NEWS_TITLE});?>" class="btn_more"><?php echo $this->translate->_('common_view_more');?></a>
+                                </div>
+                            </div>
+                        </li>
+                    <?php } ?>
+                </ul>
+                <?php echo $this->pagination; ?>
+            <?php } else { ?>
+                <p><strong><?php echo $this->translate->_('common_no_result');?></strong></p>
+                <div class="notice-success">
+                    <?php echo sprintf($this->translate->_('common_no_result_note'), $this->keyword);?>
+                </div>
+            <?php } ?>
+
+        </div>
+    </div>
+</div>
