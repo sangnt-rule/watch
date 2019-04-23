@@ -61,7 +61,6 @@ class Admin_LoginController extends Application_Controller
                 $user = $adapter->getResultRowObject();
                 if($user->{DbTable_Admin::COL_FK_CONFIG_ACTIVE} == Application_Constant_Db_Config_Active::ACTIVE )
                 {
-                    Admin_Model_Admin::getInstance()->updateLastLogin($user->{DbTable_Admin::COL_ADMIN_ID});
                     $this->setSessionAdminInfo($user);
                     $this->gotoUrl('index');
                 }

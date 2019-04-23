@@ -51,7 +51,7 @@ class Application_Controller_BackEnd extends Application_Controller
             )
         );
         $this->view->assign('isAdminRoot', $this->_isAdminRoot());
-        $this->view->assign('adminRole', $this->getAdminRole());
+        //$this->view->assign('adminRole', $this->getAdminRole());
     }
 
     protected function goto404()
@@ -101,10 +101,10 @@ class Application_Controller_BackEnd extends Application_Controller
      * Get ID of admin role
      * @return int
      */
-    protected function getAdminRole()
-    {
-        return $this->adminInfo ? $this->adminInfo->{DbTable_Admin::COL_FK_ADMIN_ROLE} : 0;
-    }
+//    protected function getAdminRole()
+//    {
+//        return $this->adminInfo ? $this->adminInfo->{DbTable_Admin::COL_FK_ADMIN_ROLE} : 0;
+//    }
 
     /**
      * Get Administrator ID
