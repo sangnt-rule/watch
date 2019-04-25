@@ -1,1 +1,0 @@
-alter table locale add column locale_code varchar(5) not null comment 'Locale Code';
