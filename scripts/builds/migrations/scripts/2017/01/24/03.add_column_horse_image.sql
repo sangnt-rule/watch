@@ -1,1 +1,0 @@
-alter table horse add column horse_image varchar(100) default null;

@@ -1,1 +1,0 @@
-alter table news add column news_sponsor tinyint(1) default 0 not null;

@@ -1,1 +1,0 @@
-alter table news add column news_event_date date default null comment 'Ngay dien ra su kien';
