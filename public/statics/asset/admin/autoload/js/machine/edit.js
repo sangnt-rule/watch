@@ -1,4 +1,4 @@
-var CategoryEdit = {
+var MachineEdit = {
     productEvent: '',
     success : function (message, url) {
         AdminCommon.openDialogAlert(message, function () {

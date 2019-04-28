@@ -4,7 +4,7 @@
             <div class="page-title">
                 <ol class="breadcrumb text-right">
                     <li><a href="#">Trang chủ</a></li>
-                    <li><a href="/category/edit">Danh mục</a></li>
+                    <li><a href="/machine/edit">Danh mục</a></li>
                     <li class="active">Danh sách</li>
                 </ol>
             </div>
@@ -17,10 +17,10 @@
             <div class="card-header">
                 <form>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" placeholder="Tìm kiếm tên danh mục...">
+                        <input type="text" class="form-control" name="name" placeholder="Tìm kiếm tên danh mục..." value="<?php echo $this->name?>">
                     </div>
                     <div class="col-12 col-sm-2">
-                        <select name="selectSm" id="SelectLm" class="form-control">
+                        <select name="acitve" id="acitve" class="form-control">
                             <option value="0">Active</option>
                             <option value="1">Unactive</option>
                         </select>
@@ -31,7 +31,7 @@
                 </form>
                 <br><br>
                 <div class="col-sm-6">
-                    <a href="/category/edit"><button class="btn btn-success btn-sm">Thêm mới</button></a>
+                    <a href="/machine/edit"><button class="btn btn-success btn-sm">Thêm mới</button></a>
                 </div>
             </div>
             <div class="card-body">
@@ -39,48 +39,27 @@
                     <thead>
                     <tr>
                         <th scope="col"><input type="checkbox"></th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
+                        <th scope="col">name</th>
+                        <th scope="col">active</th>
+                        <th scope="col">update</th>
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <th scope="row"><input type="checkbox"></th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>
-                            <a href="#">
-                                <button type="button" class="btn btn-link">
-                                <i class="fa fa-edit"></i> Edit
-                            </button>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><input type="checkbox"></th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>
-                            <a href="#">
-                                <button type="button" class="btn btn-link">
-                                    <i class="fa fa-edit"></i> Edit
-                                </button>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><input type="checkbox"></th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>
-                            <a href="#">
-                                <button type="button" class="btn btn-link">
-                                    <i class="fa fa-edit"></i> Edit
-                                </button>
-                            </a>
-                        </td>
-                    </tr>
+                    <?php foreach ($this->pagination as $data) {?>
+                        <tr>
+                            <th scope="row"><input type="checkbox"></th>
+                            <td><?php echo $data->{DbTable_Machine::COL_MACHINE_NAME}?></td>
+                            <td><?php echo $this->activeLabel($data->{DbTable_Machine::COL_MACHINE_ACTIVE})?></td>
+                            <td>
+                                <a href="/machine/edit/id/<?php echo $data->{DbTable_Machine::COL_MACHINE_ID}?>">
+                                    <button type="button" class="btn btn-link">
+                                        <i class="fa fa-edit"></i> Edit
+                                    </button>
+                                </a>
+                            </td>
+                        </tr>
+                    <?php }?>
+
                     </tbody>
                 </table>
                 <br>

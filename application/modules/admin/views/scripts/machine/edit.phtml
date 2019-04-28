@@ -1,10 +1,15 @@
+<?php
+    $name = $this->machine[DbTable_Machine::COL_MACHINE_NAME] ?? '';
+    $id = $this->machine[DbTable_Machine::COL_MACHINE_ID] ?? '';
+    $priority = $this->machine[DbTable_Machine::COL_MACHINE_PRIORITY] ?? '';
+?>
 <div class="breadcrumbs">
     <div class="col-sm-8">
         <div class="page-header float-left">
             <div class="page-title">
                 <ol class="breadcrumb text-right">
                     <li><a href="#">Trang chủ</a></li>
-                    <li><a href="/category">Danh mục</a></li>
+                    <li><a href="/machine">Loại máy</a></li>
                     <li class="active">Chỉnh sửa</li>
                 </ol>
             </div>
@@ -16,17 +21,17 @@
         <div class="card">
             <div class="card-header">
                 <div class="col-sm-6">
-                    <a href="/category"><button class="btn btn-success btn-sm">Danh sách</button></a>
+                    <a href="/machine"><button class="btn btn-success btn-sm">Danh sách</button></a>
                 </div>
             </div>
-            <form action="/category/submit-edit" id="validate" target="ifrmEdit" method="post" class="form-horizontal">
+            <form action="/machine/submit-edit" id="validate" target="ifrmEdit" method="post" class="form-horizontal">
                 <div class="card-body card-block">
                         <div class="row form-group">
                             <div class="col col-md-3">
-                                <label for="hf-email" class=" form-control-label">Danh mục : </label>
+                                <label for="hf-email" class=" form-control-label">Tên loại máy : </label>
                             </div>
                             <div class="col-12 col-md-6">
-                                <input type="text" name="category" placeholder="Danh mục..." class="form-control validate[required]">
+                                <input type="text" name="name" placeholder="Danh mục..." class="form-control validate[required]" value="<?php echo $name?>">
                             </div>
                         </div>
                         <div class="row form-group">
@@ -34,24 +39,13 @@
                                 <label for="hf-password" class=" form-control-label">Thứ tự :</label>
                             </div>
                             <div class="col-12 col-md-6">
-                                <input type="text" name="location" placeholder="Thứ tự..." class="form-control">
+                                <input type="text" name="priority" placeholder="Thứ tự..." class="form-control" value="<?php echo $priority?>">
                             </div>
                         </div>
-                    <div class="row form-group">
-                        <div class="col col-md-3">
-                            <label for="hf-password" class=" form-control-label">Thứ tự :</label>
-                        </div>
-                        <div class="col-12 col-md-6">
-                            <?php echo $this->formTextarea(
-                                sprintf('content_%d', 1),
-                                null,
-                                array('class' => 'validate[required] fck')
-                            ); ?>
 
-                        </div>
-                    </div>
                 </div>
                 <div class="card-footer">
+                    <input type="hidden" name="id" value="<?php echo $id?>">
                     <button type="submit" class="btn btn-primary">
                         <i class="fa fa-dot-circle-o"></i> Submit
                     </button>

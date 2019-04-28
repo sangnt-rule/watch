@@ -14,6 +14,7 @@ class MigrationList
             '2019/04/24/01.machine.sql',
             '2019/04/24/02.category.sql',
             '2019/04/24/03.watch.sql',
+            '2019/04/28/01.add_column_machine.sql',
         );
     }
 }
