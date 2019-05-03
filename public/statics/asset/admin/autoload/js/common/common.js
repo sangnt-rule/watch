@@ -153,7 +153,16 @@ var AdminCommon = {
     {
         var checked = this.getCheckAllValue();
         if (!checked.length) {
-            this.openDialogMessage('model_alertManualAction', null);
+            //this.openDialogMessage('model_alertManualAction', null);
+            AdminCommon.openDialogAlert('Để thực hiện chức năng này, bạn hãy chọn ít nhất 1 đơn vị dữ liệu');
+            /*Swal.fire({
+                width: 400,
+                type: 'success',
+                text: 'Để thực hiện chức năng này, bạn hãy chọn ít nhất 1 đơn vị dữ liệu' ,
+                onClose: () => {
+                    callback()
+                }
+            });*/
         } else {
             var params = {
                 'manualUpdateId' : checked,
