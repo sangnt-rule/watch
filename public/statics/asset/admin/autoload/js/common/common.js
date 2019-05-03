@@ -124,18 +124,8 @@ var AdminCommon = {
 
     initializeCheckAll: function()
     {
-        $('.check-all').click(function(){
-            var checked = this.checked;
-            $('.check-items').each(function(){
-                if (checked) {
-                    $(this).attr('checked', checked);
-                    $(this).parent().addClass('checked');
-                } else {
-                    $(this).prop('checked');
-                    $(this).parent().removeClass('checked');
-                }
-
-            });
+        $(".check-all").click(function(){
+            $('input:checkbox').not(this).prop('checked', this.checked);
         });
     },
 
