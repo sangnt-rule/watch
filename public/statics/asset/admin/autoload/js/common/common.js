@@ -153,23 +153,19 @@ var AdminCommon = {
     {
         var checked = this.getCheckAllValue();
         if (!checked.length) {
-            //this.openDialogMessage('model_alertManualAction', null);
-            AdminCommon.openDialogAlert('Để thực hiện chức năng này, bạn hãy chọn ít nhất 1 đơn vị dữ liệu');
-            /*Swal.fire({
+            Swal.fire({
                 width: 400,
-                type: 'success',
+                type: 'warning',
                 text: 'Để thực hiện chức năng này, bạn hãy chọn ít nhất 1 đơn vị dữ liệu' ,
-                onClose: () => {
-                    callback()
-                }
-            });*/
+
+            });
         } else {
             var params = {
                 'manualUpdateId' : checked,
                 'manualUpdateAction' : actionName,
                 'manualUpdateUrl' : window.location.href
             };
-            this.openDialogProcessing();
+            //this.openDialogProcessing();
             this.redirect( controllerName + '/manual-update/?' + this.encodeQueryData(params) );
         }
     },
