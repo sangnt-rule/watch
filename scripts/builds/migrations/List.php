@@ -20,6 +20,7 @@ class MigrationList
             '2019/05/04/03.insert_data_category.sql',
             '2019/05/04/05.create_table_banner.sql',
             '2019/05/04/06.add_column_watch.sql',
+            '2019/05/04/07.create_table_watch_image.sql',
         );
     }
 }
