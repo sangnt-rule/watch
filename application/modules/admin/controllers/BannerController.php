@@ -3,99 +3,66 @@ class Admin_BannerController extends Application_Controller_BackEnd_Admin
 {
     public function indexAction()
     {
-        $locale = $this->getRequest()->getParam('locale', Application_Constant_Db_Locale::VIETNAMESE);
-        $activeId = $this->getRequest()->getParam('a', 1);
+        $title = $this->getRequest()->getParam('title');
+        $content = $this->getRequest()->getParam('content');
+        $active = $this->getRequest()->getParam('active', -1);
         $this->loadGird(
-            Admin_Model_Banner::getInstance()->searchQuery($locale, $activeId)
+            Admin_Model_Banner::getInstance()->getAll($title, $content, $active)
         );
-        $this->view->assign('locale', $locale);
-        $this->view->assign('activeId', $activeId);
-        $this->view->assign(
-            'localeData',
-            $this->_helper->buildArrayInKeyAttribute(
-                Admin_Model_Locale::getInstance()->getAll(),
-                DbTable_Locale::COL_LOCALE_ID,
-                DbTable_Locale::COL_LOCALE_NAME
-            )
-        );
-        $this->view->assign(
-            'activeData',
-            $this->_helper->buildArrayInKeyAttribute(
-                Admin_Model_ConfigActive::getInstance()->getAll(),
-                DbTable_Config_Active::COL_CONFIG_ACTIVE_ID,
-                DbTable_Config_Active::COL_CONFIG_ACTIVE_NAME
-            )
-        );
+        $this->view->assign('title',$title);
+        $this->view->assign('content',$content);
+        $this->view->assign('active',$active);
     }
 
     public function editAction()
     {
-        $id = $this->getRequest()->getParam('i');
-        $localeData = Admin_Model_Locale::getInstance()->getAll();
-        $result = array();
-        $data = null;
-        if ($id) {
-            $data = Admin_Model_Banner::getInstance()->getByOriginalId($id);
-        }
-        foreach ($localeData as $localeId => $record) {
-            $record[Application_Constant_Module_Admin::DATA] = array();
-            if ($data) {
-                $record[Application_Constant_Module_Admin::DATA] = $this->_helper->filterArray(
-                    $data,
-                    DbTable_Banner::COL_FK_LOCALE,
-                    $localeId
-                );
-            }
-            array_push($result, $record);
-        }
-        $this->view->assign('data', $data);
-        $this->view->assign('result', $result);
-        $this->view->assign(
-            'localeData',
-            $this->_helper->buildArrayInKeyAttribute(
-                $localeData,
-                DbTable_Locale::COL_LOCALE_ID,
-                DbTable_Locale::COL_LOCALE_NAME
-            )
-        );
+        $bannerId = $this->getRequest()->getParam('id');
+        $banner = Admin_Model_Banner::getInstance()->getById($bannerId);
+        $this->view->assign('id',$bannerId);
+        $this->view->assign('banner',$banner);
     }
 
     public function submitEditAction()
     {
-        $localeData = Admin_Model_Locale::getInstance()->getAll();
-        if ($localeData) {
-            $localeIdData = array_keys($localeData);
-            $originalId = null;
-            $idInsertedData = array();
+        $message = '';
+        $url = 'banner';
+        $id = $this->getRequest()->getParam('id');
+        $title = $this->getRequest()->getParam('title');
+        $content = $this->getRequest()->getParam('content');
+        $priority = $this->getRequest()->getParam('priority');
+        $oldBanner = $this->getRequest()->getParam('oldBanner');
 
-            foreach ($localeIdData as $localeId) {
-                $id = $this->getRequest()->getParam('id_' . $localeId);
-                $image = $this->getRequest()->getParam('image_' . $localeId);
-                $note = $this->getRequest()->getParam('note_' . $localeId);
-                $metaKeyword = $this->getRequest()->getParam('metaKeyword_' . $localeId);
-                $metaTitle = $this->getRequest()->getParam('metaTitle_' . $localeId);
-                $metaDescription = $this->getRequest()->getParam('metaDescription_' . $localeId);
-
-                $validation = true;
-                if ($validation) {
-                    $imageUpload = $this->uploadImage('banner', 'file_'.$localeId, true);
-                    if ($imageUpload) {
-                        $image = $imageUpload;
-                    }
-                    if ($id) {
-                        Admin_Model_Banner::getInstance()->update($id, $image, $metaTitle, $metaKeyword, $metaDescription, $note);
-                    }
-                    if (!$originalId) {
-                        $originalId = $id;
-                    }
-                    array_push($idInsertedData, $id);
-                }
+        $image = $oldBanner;
+        $elementName = 'banner';
+        $valid_file_extensions = array(".jpg", ".jpeg", ".gif", ".png");
+        $file_extension = strrchr($_FILES[$elementName]["name"], ".");
+        $maxSizeUpload = Zend_Registry::get('config')->maxSizeImage->default ?? 10485760;
+        if(isset($_FILES[$elementName]) && $_FILES[$elementName]['name']){
+            if (!in_array($file_extension, $valid_file_extensions)) {
+                $message = $this->getTranslateValue('error_image_invalid');
+            }else if($_FILES[$elementName]['size'] > $maxSizeUpload){
+                $message = $this->getTranslateValue('error_size_banner');
+            }else {
+                $image = $this->uploadImage('banner', $elementName);
             }
-            if ($originalId && $idInsertedData) {
-                Admin_Model_Banner::getInstance()->updateOriginalId($idInsertedData, $originalId);
-            }
-            echo $this->callScriptParent('AdminCommon.goTo', array('/banner'));
         }
+        if(!$message){
+            if(!$id){
+                $message = Admin_Model_Banner::getInstance()->insert($title,$content,$image,$priority);
+            }else{
+                $message = Admin_Model_Banner::getInstance()->update($id,$title,$content,$image,$priority);
+            }
+            if(!$message){
+                $message = 'Thêm thành công';
+            }else{
+                $message = 'Thêm thất bại';
+                $url = 'banner/edit/id='.$id;
+            }
+        }else{
+            $url = 'banner/edit/id='.$id;
+        }
+
+        echo $this->callScriptParent('BannerEdit.success', [$message, $url]);
         $this->noRender();
     }
 
@@ -104,19 +71,16 @@ class Admin_BannerController extends Application_Controller_BackEnd_Admin
         $manualUpdateId = $this->getRequest()->getParam('manualUpdateId');
         $manualUpdateAction = $this->getRequest()->getParam('manualUpdateAction');
         $manualUpdateUrl = $this->getRequest()->getParam('manualUpdateUrl');
-
         $manualUpdateAction = strtolower(trim($manualUpdateAction));
-
         $idValue = explode(',', $manualUpdateId);
         if ($idValue) {
-            $actionActive = array(
-                Application_Constant_Module_Admin::ACTIVE_VALUE,
-                Application_Constant_Module_Admin::INACTIVE_VALUE,
+            $activeData = array(
+                'activate' => Application_Constant_Db_Config_Active::ACTIVE,
+                'inactivate' => Application_Constant_Db_Config_Active::INACTIVE,
             );
-
-            if (in_array($manualUpdateAction, $actionActive)) {
-                $valueActive = $manualUpdateAction == Application_Constant_Module_Admin::ACTIVE_VALUE ? 1 : 0;
-                Admin_Model_Banner::getInstance()->manualUpdateActive($idValue, $valueActive);
+            if (in_array($manualUpdateAction, array_keys($activeData))) {
+                $valueActive = $activeData[$manualUpdateAction];
+                Admin_Model_Banner::getInstance()->manualUpdateActive($valueActive, $idValue);
             }
         }
 

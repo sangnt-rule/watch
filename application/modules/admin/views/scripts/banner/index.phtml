@@ -1,101 +1,96 @@
-<div class="wrapper">
-    <ul class="breadcrumbs">
-        <li><a href="/"><?php echo $this->translate->_('common_homepage');?></a> </li>
-        <li><?php echo $this->translate->_('admin_module_website_management');?></li>
-        <li><?php echo $this->translate->_('admin_resource_banner');?></li>
-        <li class="current"><?php echo $this->translate->_('admin_privilege_listing');?></li>
-    </ul>
-</div>
-<div class="wrapper">
-    <form method="get" action="">
-        <fieldset class="filter">
-            <?php echo $this->formSelect(
-                'locale',
-                $this->locale,
-                array(),
-                array(0 => sprintf('+ %s', $this->translate->_('common_select_all_locale'))) + $this->localeData
-            ); ?>
-            <?php echo $this->formSelect(
-                'a',
-                $this->activeId,
-                array(),
-                array(-1 => sprintf('+ %s', $this->translate->_('common_all_status'))) + $this->activeData
-            ); ?>
-            <input type="submit" value="<?php echo $this->translate->_('admin_common_search_button');?>" class="button greenB" />
-        </fieldset>
-    </form>
-</div>
-
-<div class="wrapper">
-    <div class="widget">
-        <div class="title">
-            <img src="images/icons/dark/frames.png" alt="" class="titleIcon" />
-            <h6><?php echo $this->pagination->getTotalItemCount(); ?> <?php echo $this->translate->_('admin_common_listing_row');?></h6>
+<div class="breadcrumbs">
+    <div class="col-sm-8">
+        <div class="page-header float-left">
+            <div class="page-title">
+                <ol class="breadcrumb text-right">
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="/machine/edit">Danh mục</a></li>
+                    <li class="active">Danh sách</li>
+                </ol>
+            </div>
         </div>
-
-        <table cellpadding="0" cellspacing="0" width="100%" class="sTable withCheck mTable" id="checkAll">
-            <thead>
-            <tr>
-                <td class="titleIcon">
-                    <?php echo $this->formCheckbox(null, null, array('class' => 'check-all')); ?>
-                </td>
-                <td><?php echo $this->translate->_('admin_common_title');?></td>
-                <td><?php echo $this->translate->_('admin_common_image');?></td>
-                <td><?php echo $this->translate->_('admin_common_status');?></td>
-                <td style="width: 90px;"></td>
-            </tr>
-            </thead>
-            <tbody>
-            <?php foreach ($this->pagination as $data) {?>
-                <tr>
-                    <td>
-                        <?php echo $this->formCheckbox(
-                            null,
-                            $data->{DbTable_Banner::COL_BANNER_ID},
-                            array('class' => 'check-items')
-                        ); ?>
-                    </td>
-                    <td>
-                        <span class="module"><?php echo $data->{DbTable_Banner::COL_BANNER_NOTE}; ?></span>
-                        <p style="border-top:1px dotted #ccc; margin-top: 10px; padding-top: 10px">
-                            <div><strong>Title: </strong><?php echo $data->{DbTable_Banner::COL_BANNER_META_TITLE}; ?></div>
-                            <div><strong>Meta Keyword: </strong><?php echo $data->{DbTable_Banner::COL_BANNER_META_KEYWORD}; ?></div>
-                            <div><strong>Meta Description: </strong><?php echo $data->{DbTable_Banner::COL_BANNER_META_DESCRIPTION}; ?></div>
-                        </p>
-                    </td>
-                    <td>
-                        <?php $image = $data->{DbTable_Banner::COL_BANNER_IMAGE};?>
-                        <?php if ($image  && $image!='none') { ?>
-                            <img src="<?php echo HOST_UPLOAD .  $image; ?>" width="180px" >
-                        <?php } ?>
-
-                    </td>
-                    <td><?php echo $this->activeLabel($data->{DbTable_Banner::COL_FK_CONFIG_ACTIVE}); ?></td>
-                    <td>
-                        <a class="cp" href="/banner/edit/?i=<?php echo $data->{DbTable_Banner::COL_BANNER_ORIGINAL}; ?>">
-                            <?php echo $this->translate->_('admin_common_edit_button');?></a>
-                    </td>
-                </tr>
-            <?php } ?>
-            </tbody>
-            <tfoot>
-            <tr>
-                <td colspan="99">
-                    <div class="itemActions">
-                        <select id="manualUpdateElement" class="uniform">
-                            <option value="">++</option>
-                            <option value="<?php echo Application_Constant_Module_Admin::ACTIVE_VALUE?>">
-                                Active
-                            </option>
-                            <option value="<?php echo Application_Constant_Module_Admin::INACTIVE_VALUE?>">
-                                InActive
-                            </option>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <form>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="title" placeholder="Tìm kiếm tên danh mục..." value="<?php echo $this->title?>">
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="content" placeholder="Tìm kiếm tên danh mục..." value="<?php echo $this->content?>">
+                    </div>
+                    <div class="col-12 col-sm-2">
+                        <select name="active" id="active" class="form-control">
+                            <option value="-1">Tất cả</option>
+                            <option value="1" <?php echo $this->active ==1 ? 'selected' : ''?>>Kích Hoạt</option>
+                            <option value="0" <?php echo $this->active ==0 ? 'selected' : ''?>>Hủy Kết Hoạt</option>
                         </select>
                     </div>
-                    <?php echo $this->pagination; ?>
-                </td>
-            </tr>
-            </tfoot>
-        </table>
+                    <div class="col-sm-3">
+                        <button type="submit" class="btn btn-outline-success">Tìm kiếm</button>
+                    </div>
+                </form>
+                <br><br>
+                <div class="col-sm-6">
+                    <a href="/banner/edit"><button class="btn btn-success btn-sm">Thêm mới</button></a>
+                </div>
+            </div>
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th scope="col"><input type="checkbox" class="check-all"></th>
+                        <th scope="col">Tiêu Đề</th>
+                        <th scope="col">Nội Dung</th>
+                        <th scope="col">Hình Ảnh</th>
+                        <th scope="col">Tình Trạng</th>
+                        <th scope="col">Chính Sửa</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php foreach ($this->pagination as $data) {?>
+                        <tr>
+                            <th scope="row"><input type="checkbox" class="check-items" value="<?php echo $data->{DbTable_Banner::COL_BANNER_ID}?>"></th>
+                            <td><?php echo $data->{DbTable_Banner::COL_BANNER_TITLE}?></td>
+                            <td><?php echo $data->{DbTable_Banner::COL_BANNER_CONTENT}?></td>
+                            <td><?php echo $this->image($data->{DbTable_Banner::COL_BANNER_IMAGE})?></td>
+                            <?php
+                                $active = $data->{DbTable_Banner::COL_BANNER_ACTIVE} == Application_Constant_Db_Config_Active::ACTIVE
+                                    ? 'Kích Hoạt' : 'Chưa Kích Hoạt';
+                            ?>
+                            <td><?php echo $active?></td>
+                            <td>
+                                <a href="/banner/edit/id/<?php echo $data->{DbTable_Banner::COL_BANNER_ID}?>">
+                                    <button type="button" class="btn btn-link">
+                                        <i class="fa fa-edit"></i> Edit
+                                    </button>
+                                </a>
+                            </td>
+                        </tr>
+                    <?php }?>
+
+                    </tbody>
+                </table>
+                <br>
+                <div class="row">
+                    <div class="col-sm-12 col-md-2">
+                        <div class="dataTables_info" id="bootstrap-data-table-export_info" role="status" aria-live="polite">
+                            <select name="manualUpdateElement" id="manualUpdateElement" class="form-control">
+                                <option value="">Chọn</option>
+                                <option value="inactivate">Hủy Kích Hoạt</option>
+                                <option value="activate">Kích Hoạt</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-12 col-md-10">
+                        <?php echo $this->pagination; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

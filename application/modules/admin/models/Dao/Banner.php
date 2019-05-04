@@ -7,47 +7,49 @@
  */
 class Admin_Model_Dao_Banner extends DbTable_Banner
 {
-    /**
-     * Generate search query
-     * @param int $locale
-     * @param int $activeId
-     * @return Zend_Db_Table_Select
-     */
-    public function searchQuery($locale, $activeId)
+    public function getAll($title,$content,$active)
     {
         $select = $this->select()
             ->from(
                 DbTable_Banner::_tableName,
                 array(
                     DbTable_Banner::COL_BANNER_ID,
-                    DbTable_Banner::COL_BANNER_NOTE,
                     DbTable_Banner::COL_BANNER_IMAGE,
-                    DbTable_Banner::COL_FK_CONFIG_ACTIVE,
-                    DbTable_Banner::COL_FK_LOCALE,
-                    DbTable_Banner::COL_BANNER_ORIGINAL,
-                    DbTable_Banner::COL_BANNER_META_TITLE,
-                    DbTable_Banner::COL_BANNER_META_DESCRIPTION,
-                    DbTable_Banner::COL_BANNER_META_KEYWORD,
+                    DbTable_Banner::COL_BANNER_TITLE,
+                    DbTable_Banner::COL_BANNER_CONTENT,
+                    DbTable_Banner::COL_BANNER_ACTIVE
                 )
             )
         ;
-        if ($activeId > -1) {
-            $select->where(DbTable_Banner::COL_FK_CONFIG_ACTIVE . '=?', $activeId);
+        if($title){
+            $select->where(DbTable_Banner::COL_BANNER_TITLE." LIKE '%$title%'");
         }
-        if ($locale) {
-            $select->where(DbTable_Banner::COL_FK_LOCALE . '=?', $locale);
+        if($content){
+            $select->where(DbTable_Banner::COL_BANNER_CONTENT." LIKE '%$content%'");
         }
+        if($active>-1){
+            $select->where(DbTable_Banner::COL_BANNER_ACTIVE.'=?', $active);
+        }
+        $select->order(DbTable_Banner::COL_BANNER_ID.' DESC');
         return $select;
     }
 
-    /**
-     * Get by original ID
-     * @param int $originalId
-     * @return Zend_Db_Table_Rowset_Abstract
-     */
-    public function getByOriginalId($originalId)
+    public function getById($bannerId)
     {
-        $select = $this->select()->where(DbTable_Banner::COL_BANNER_ORIGINAL . '=?', $originalId);
-        return $this->fetchAll($select);
+        $select = $this->select()
+            ->from(
+                DbTable_Banner::_tableName,
+                array(
+                    DbTable_Banner::COL_BANNER_ID,
+                    DbTable_Banner::COL_BANNER_IMAGE,
+                    DbTable_Banner::COL_BANNER_TITLE,
+                    DbTable_Banner::COL_BANNER_CONTENT,
+                    DbTable_Banner::COL_BANNER_PRIORITY,
+                )
+            )
+            ->where(DbTable_Banner::COL_BANNER_ID.'=?', $bannerId)
+        ;
+
+        return $this->fetchRow($select);
     }
 }

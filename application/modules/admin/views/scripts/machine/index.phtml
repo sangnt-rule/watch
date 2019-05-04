@@ -22,8 +22,8 @@
                     <div class="col-12 col-sm-2">
                         <select name="active" id="active" class="form-control">
                             <option value="-1">all</option>
-                            <option value="1" <?php echo $this->active ==1 ? 'selected' : ''?>>Active</option>
-                            <option value="0" <?php echo $this->active ==0 ? 'selected' : ''?>>Unactive</option>
+                            <option value="1" <?php echo $this->active ==1 ? 'selected' : ''?>>Kích Hoạt</option>
+                            <option value="0" <?php echo $this->active ==0 ? 'selected' : ''?>>Hủy Kết Hoạt</option>
                         </select>
                     </div>
                     <div class="col-sm-3">
@@ -69,8 +69,8 @@
                         <div class="dataTables_info" id="bootstrap-data-table-export_info" role="status" aria-live="polite">
                             <select name="manualUpdateElement" id="manualUpdateElement" class="form-control">
                                 <option value="">Chọn</option>
-                                <option value="inactivate">Unactive</option>
-                                <option value="activate">Active</option>
+                                <option value="inactivate">Hủy Kích Hoạt</option>
+                                <option value="activate">Kích Hoạt</option>
                             </select>
                         </div>
                     </div>
