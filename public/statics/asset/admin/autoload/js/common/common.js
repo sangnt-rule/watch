@@ -78,10 +78,10 @@ var AdminCommon = {
         Swal.fire({
             width: 400,
             type: 'success',
-            text: message ,
-            onClose: () => {
-            callback()
-        }
+            text: message
+        //     onClose: () => {
+        //     callback()
+        // }
         });
     },
 
@@ -124,18 +124,8 @@ var AdminCommon = {
 
     initializeCheckAll: function()
     {
-        $('.check-all').click(function(){
-            var checked = this.checked;
-            $('.check-items').each(function(){
-                if (checked) {
-                    $(this).attr('checked', checked);
-                    $(this).parent().addClass('checked');
-                } else {
-                    $(this).prop('checked');
-                    $(this).parent().removeClass('checked');
-                }
-
-            });
+        $(".check-all").click(function(){
+            $('input:checkbox').not(this).prop('checked', this.checked);
         });
     },
 
@@ -163,7 +153,13 @@ var AdminCommon = {
     {
         var checked = this.getCheckAllValue();
         if (!checked.length) {
-            this.openDialogMessage('model_alertManualAction', null);
+            //this.openDialogMessage('model_alertManualAction', null);
+            AdminCommon.openDialogAlert('Để thực hiện chức năng này, bạn hãy chọn ít nhất 1 đơn vị dữ liệu');
+            Swal.fire({
+                width: 400,
+                type: 'warning',
+                text: 'Để thực hiện chức năng này, bạn hãy chọn ít nhất 1 đơn vị dữ liệu'
+            });
         } else {
             var params = {
                 'manualUpdateId' : checked,

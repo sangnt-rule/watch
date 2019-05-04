@@ -83,4 +83,15 @@ class Admin_Model_Machine extends Application_Singleton
         $data = $this->_dao->getById($id);
         return $data ? $data->toArray() : '';
     }
+
+    public function manualUpdateActive($value, $id)
+    {
+        $where = sprintf(
+            '%s IN (%s)',
+            DbTable_Machine::COL_MACHINE_ID,
+            $this->_dao->getAdapter()->quote($id)
+        );
+        $params = array(DbTable_Machine::COL_MACHINE_ACTIVE => intval($value));
+        return $this->_dao->update($params, $where);
+    }
 }
