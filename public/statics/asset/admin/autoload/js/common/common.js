@@ -79,9 +79,9 @@ var AdminCommon = {
             width: 400,
             type: 'success',
             text: message ,
-            onClose: () => {
-            callback()
-        }
+        //     onClose: () => {
+        //     callback()
+        // }
         });
     },
 

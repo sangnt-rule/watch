@@ -20,16 +20,8 @@ class Model_Banner extends Application_Singleton
      */
     public function getAll()
     {
-        $key = Application_Cache_Default::getInstance()->banner();
-        $result = Application_Cache::getInstance()->load($key);
-        if (!$result) {
-            $data = $this->_dao->getAll();
-            if ($data) {
-                $result = $data->toArray();
-            }
-            Application_Cache::getInstance()->save($result, $key, null);
-        }
-        return $result;
+        $data = $this->_dao->getAll();
+        return $data ? $data->toArray() : null;
     }
 
     /**

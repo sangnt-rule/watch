@@ -27,7 +27,20 @@
                     <li>
                         <a href="/">Trang Chủ</a>
                     </li>
-
+                    <?php
+                       foreach ($this->machine as $value){
+                           echo "<li>";
+                               echo "<a href='/machine-".$value[DbTable_Machine::COL_MACHINE_ID].".html'>".$value[DbTable_Machine::COL_MACHINE_NAME]."</a>";
+                                  echo "<ul class='sub_menu'>";
+                                  foreach ($this->cord as $val){
+                                      echo "<li>";
+                                          echo "<a href='/machine-".$value[DbTable_Machine::COL_MACHINE_ID]."/watch-".$val[DbTable_Cord::COL_CORD_ID].".html'>".$val[DbTable_Cord::COL_CORD_NAME]."</a>";
+                                      echo "</li>";
+                                  }
+                                  echo "</ul>";
+                           echo "</li>";
+                       }
+                    ?>
                     <li>
                         <a href="/product-1.html">Đồng Hồ Cơ</a>
                         <ul class="sub_menu">
