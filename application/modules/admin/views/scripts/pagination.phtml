@@ -1,56 +1,27 @@
 <?php if ($this->pageCount): ?>
-    <div class="tPagination">
-        <ul>
+    <div class="dataTables_paginate paging_simple_numbers" id="bootstrap-data-table-export_paginate">
+        <ul class="pagination">
+            <li class="paginate_button page-item previous disabled" id="bootstrap-data-table-export_previous">
+            <?php if (isset($this->previous)): ?>
+                <a href="<?php echo $this->currentFullUrl(array('page' => $this->previous)); ?>" aria-controls="bootstrap-data-table-export" data-dt-idx="0" tabindex="0" class="page-link">Previous</a>
+            <?php endif ?>
+                <?php foreach ($this->pagesInRange as $page): ?>
             <li>
-                <!-- First page link -->
-                <?php if (isset($this->previous)): ?>
-                    <a href="<?php echo $this->currentFullUrl(array('page' => $this->first)); ?>">
-                        First
-                    </a>
-                <?php else: ?>
-                    <span class="disabled">First</span>
-                <?php endif; ?>
-            </li>
-            <li>
-                <!-- Previous page link -->
-                <?php if (isset($this->previous)): ?>
-                    <a href="<?php echo $this->currentFullUrl(array('page' => $this->previous)); ?>">&lt;</a>
-                <?php else: ?>
-                    <span class="disabled">&lt;</span>
-                <?php endif; ?>
-            </li>
-
-            <!-- Numbered page links -->
-            <?php foreach ($this->pagesInRange as $page): ?>
-                <li>
                 <?php if ($page != $this->current): ?>
-                    <a href="<?php echo $this->currentFullUrl(array('page' => $page)); ?>">
+                    <a href="<?php echo $this->currentFullUrl(array('page' => $page)); ?>" aria-controls="bootstrap-data-table-export" data-dt-idx="<?php echo $page; ?>" tabindex="0" class="page-link">
                         <?php echo $page; ?>
                     </a>
                 <?php else: ?>
                     <?php echo $page; ?>
                 <?php endif; ?>
-                </li>
+            </li>
             <?php endforeach; ?>
 
-            <li>
-                <!-- Next page link -->
+            <li class="paginate_button page-item next" id="bootstrap-data-table-export_next">
                 <?php if (isset($this->next)): ?>
-                    <a href="<?php echo $this->currentFullUrl(array('page' => $this->next)); ?>">&gt;</a>
-                <?php else: ?>
-                    <span class="disabled">&gt;</span>
-                <?php endif; ?>
+                    <a href="<?php echo $this->currentFullUrl(array('page' => $this->last)); ?>" aria-controls="bootstrap-data-table-export" data-dt-idx="7" tabindex="0" class="page-link">Next</a>
+                <?php endif ?>
             </li>
-            <li>
-                <!-- Last page link -->
-                <?php if (isset($this->next)): ?>
-                    <a href="<?php echo $this->currentFullUrl(array('page' => $this->last)); ?>">
-                        Last
-                    </a>
-                <?php else: ?>
-                    <span class="disabled">Last</span>
-                <?php endif; ?>
-            </li>
-         </ul>
+        </ul>
     </div>
 <?php endif; ?>

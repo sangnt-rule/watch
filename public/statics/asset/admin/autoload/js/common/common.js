@@ -78,10 +78,10 @@ var AdminCommon = {
         Swal.fire({
             width: 400,
             type: 'success',
-            text: message
-        //     onClose: () => {
-        //     callback()
-        // }
+            text: message ,
+            onClose: () => {
+            callback()
+        }
         });
     },
 
@@ -155,18 +155,21 @@ var AdminCommon = {
         if (!checked.length) {
             //this.openDialogMessage('model_alertManualAction', null);
             AdminCommon.openDialogAlert('Để thực hiện chức năng này, bạn hãy chọn ít nhất 1 đơn vị dữ liệu');
-            Swal.fire({
+            /*Swal.fire({
                 width: 400,
-                type: 'warning',
-                text: 'Để thực hiện chức năng này, bạn hãy chọn ít nhất 1 đơn vị dữ liệu'
-            });
+                type: 'success',
+                text: 'Để thực hiện chức năng này, bạn hãy chọn ít nhất 1 đơn vị dữ liệu' ,
+                onClose: () => {
+                    callback()
+                }
+            });*/
         } else {
             var params = {
                 'manualUpdateId' : checked,
                 'manualUpdateAction' : actionName,
                 'manualUpdateUrl' : window.location.href
             };
-            this.openDialogProcessing();
+            //this.openDialogProcessing();
             this.redirect( controllerName + '/manual-update/?' + this.encodeQueryData(params) );
         }
     },

@@ -17,11 +17,14 @@
             <div class="card-header">
                 <form>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" name="name" placeholder="Tìm kiếm tên danh mục..." value="<?php echo $this->name?>">
+                        <input type="text" class="form-control" name="title" placeholder="Tìm kiếm tên danh mục..." value="<?php echo $this->title?>">
+                    </div>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" name="content" placeholder="Tìm kiếm tên danh mục..." value="<?php echo $this->content?>">
                     </div>
                     <div class="col-12 col-sm-2">
                         <select name="active" id="active" class="form-control">
-                            <option value="-1">all</option>
+                            <option value="-1">Tất cả</option>
                             <option value="1" <?php echo $this->active ==1 ? 'selected' : ''?>>Kích Hoạt</option>
                             <option value="0" <?php echo $this->active ==0 ? 'selected' : ''?>>Hủy Kết Hoạt</option>
                         </select>
@@ -32,7 +35,7 @@
                 </form>
                 <br><br>
                 <div class="col-sm-6">
-                    <a href="/machine/edit"><button class="btn btn-success btn-sm">Thêm mới</button></a>
+                    <a href="/banner/edit"><button class="btn btn-success btn-sm">Thêm mới</button></a>
                 </div>
             </div>
             <div class="card-body">
@@ -40,19 +43,35 @@
                     <thead>
                     <tr>
                         <th scope="col"><input type="checkbox" class="check-all"></th>
-                        <th scope="col">name</th>
-                        <th scope="col">active</th>
-                        <th scope="col">update</th>
+                        <th scope="col">Tên đồng hồ</th>
+                        <th scope="col">Mô tả</th>
+                        <th scope="col">Loại Dây</th>
+                        <th scope="col">Mặt đồng hồ</th>
+                        <th scope="col">Loại Kính</th>
+                        <th scope="col">Giá</th>
+                        <th scope="col">Kích thước mặt</th>
+                        <th scope="col">Bộ máy</th>
+                        <th scope="col">Thể loại</th>
                     </tr>
                     </thead>
                     <tbody>
                     <?php foreach ($this->pagination as $data) {?>
                         <tr>
-                            <th scope="row"><input type="checkbox" class="check-items" value="<?php echo $data->{DbTable_Machine::COL_MACHINE_ID}?>"></th>
-                            <td><?php echo $data->{DbTable_Machine::COL_MACHINE_NAME}?></td>
-                            <td><?php echo $this->activeLabel($data->{DbTable_Machine::COL_MACHINE_ACTIVE})?></td>
+                            <th scope="row"><input type="checkbox" class="check-items" value="<?php echo $data->{DbTable_Watch::COL_WATCH_ID}?>"></th>
+                            <td><?php echo $data->{DbTable_Watch::COL_WATCH_NAME}?></td>
+                            <td><?php echo $data->{DbTable_Watch::COL_WATCH_DESCRIPTION}?></td>
+                            <td><?php echo $data->{DbTable_Cord::COL_CORD_NAME}?></td>
+                            <td><?php echo $data->{DbTable_Watch::COL_WATCH_FACE}?></td>
+                            <td><?php echo $data->{DbTable_Watch::COL_WATCH_GLASSES}?></td>
+                            <td><?php echo $data->{DbTable_Watch::COL_WATCH_PRICE}?></td>
+                            <td><?php echo $data->{DbTable_Watch::COL_WATCH_SIZE}?></td>
+                            <?php
+                            $active = $data->{DbTable_Banner::COL_BANNER_ACTIVE} == Application_Constant_Db_Config_Active::ACTIVE
+                                ? 'Kích Hoạt' : 'Chưa Kích Hoạt';
+                            ?>
+                            <td><?php echo $active?></td>
                             <td>
-                                <a href="/machine/edit/id/<?php echo $data->{DbTable_Machine::COL_MACHINE_ID}?>">
+                                <a href="/banner/edit/id/<?php echo $data->{DbTable_Banner::COL_BANNER_ID}?>">
                                     <button type="button" class="btn btn-link">
                                         <i class="fa fa-edit"></i> Edit
                                     </button>

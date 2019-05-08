@@ -45,7 +45,6 @@ class Admin_MachineController extends Application_Controller_BackEnd_Admin
         $manualUpdateId = $this->getRequest()->getParam('manualUpdateId');
         $manualUpdateAction = $this->getRequest()->getParam('manualUpdateAction');
         $manualUpdateUrl = $this->getRequest()->getParam('manualUpdateUrl');
-
         $manualUpdateAction = strtolower(trim($manualUpdateAction));
         $idValue = explode(',', $manualUpdateId);
         if ($idValue) {

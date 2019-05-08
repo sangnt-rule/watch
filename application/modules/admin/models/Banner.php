@@ -17,126 +17,78 @@ class Admin_Model_Banner extends Application_Singleton
         $this->_dao = new Admin_Model_Dao_Banner();
     }
 
-    /**
-     * Generate search query
-     * @param int $locale
-     * @param int $activeId
-     * @return Zend_Db_Table_Select
-     */
-    public function searchQuery($locale, $activeId)
+    public function getAll($title,$content, $active)
     {
-        $locale = intval($locale);
-        $activeId = intval($activeId);
-        return $this->_dao->searchQuery($locale, $activeId);
+        $title = trim($title);
+        $content = trim($content);
+        $active = intval($active);
+        return $this->_dao->getAll($title,$content, $active);
     }
 
-    /**
-     * Get by ID
-     * @param int $id
-     * @return null|Zend_Db_Table_Row_Abstract
-     */
-    public function getById($id)
+    public function insert($title,$content,$image,$priority)
     {
-        $id = intval($id);
-        $data = $this->_dao->find($id);
-        return $data ? $data->current() : null;
-    }
-
-    /**
-     * Get by original ID
-     * @param int $originalId
-     * @return array
-     */
-    public function getByOriginalId($originalId)
-    {
-        $originalId = intval($originalId);
-        $data =  $this->_dao->getByOriginalId($originalId);
-        return $data ? $data->toArray() : null;
-    }
-
-    /**
-     * Update data
-     * @param int $id
-     * @param string $image
-     * @param string $metaTitle
-     * @param string $metaKeyword
-     * @param string $metaDescription
-     * @param string $note
-     * @return string
-     */
-    public function update($id, $image, $metaTitle, $metaKeyword, $metaDescription, $note)
-    {
-        $response = '';
+        $title = trim($title);
+        $content = trim($content);
+        $image = trim($image);
+        $priority = intval($priority);
+        $result = null;
         try {
-            $id = intval($id);
-            $image = trim($image);
-            $metaTitle = trim($metaTitle);
-            $metaKeyword = trim($metaKeyword);
-            $metaDescription = trim($metaDescription);
-            $note = trim($note);
-
-            $data = array(
+            $params = array(
+                DbTable_Banner::COL_BANNER_TITLE => $title,
+                DbTable_Banner::COL_BANNER_CONTENT => $content,
                 DbTable_Banner::COL_BANNER_IMAGE => $image,
-                DbTable_Banner::COL_BANNER_META_TITLE => $metaTitle,
-                DbTable_Banner::COL_BANNER_META_KEYWORD => $metaKeyword,
-                DbTable_Banner::COL_BANNER_META_DESCRIPTION => $metaDescription,
-                DbTable_Banner::COL_BANNER_NOTE => $note,
+                DbTable_Banner::COL_BANNER_PRIORITY => $priority,
+                DbTable_Banner::COL_BANNER_ACTIVE => Application_Constant_Db_Config_Active::ACTIVE,
             );
-            $where = sprintf('%s=%d', DbTable_Banner::COL_BANNER_ID, $id);
-            $this->_dao->update($data, $where);
-            Application_Cache_Default::getInstance()->resetBanner();
+            $this->_dao->insert($params);
         } catch (Exception $e) {
-            $response = $e->getMessage();
+            $result = $e->getMessage();
         }
-        return $response;
+        return $result;
     }
 
-    /**
-     * Update original ID
-     * @param int|array $id
-     * @param int $originalId
-     * @return string
-     */
-    public function updateOriginalId($id, $originalId)
+    public function update($id,$title,$content,$image,$priority)
     {
-        $response = '';
+        $title = trim($title);
+        $content = trim($content);
+        $image = trim($image);
+        $priority = intval($priority);
+        $result = null;
         try {
-            $id = is_array($id) ? $id : intval($id);
-            $originalId = intval($originalId);
-
-            $data = array(
-                DbTable_Banner::COL_BANNER_ORIGINAL => $originalId,
+            $params = array(
+                DbTable_Banner::COL_BANNER_TITLE => $title,
+                DbTable_Banner::COL_BANNER_CONTENT => $content,
+                DbTable_Banner::COL_BANNER_IMAGE => $image,
+                DbTable_Banner::COL_BANNER_PRIORITY => $priority,
+                DbTable_Banner::COL_BANNER_ACTIVE => Application_Constant_Db_Config_Active::ACTIVE,
             );
-            $where = sprintf('%s in (%s)', DbTable_Banner::COL_BANNER_ID, $this->_dao->getAdapter()->quote($id));
-            $this->_dao->update($data, $where);
+            $where = sprintf(
+                '%s IN (%s)',
+                DbTable_Banner::COL_BANNER_ID,
+                $this->_dao->getAdapter()->quote($id)
+            );
+            $this->_dao->update($params, $where);
         } catch (Exception $e) {
-            $response = $e->getMessage();
+            $result = $e->getMessage();
         }
-        return $response;
+        return $result;
     }
 
-    /**
-     * Update display homepage
-     * @param int|array $id
-     * @param int $activeValue
-     * @return string
-     */
-    public function manualUpdateActive($id, $activeValue)
+    public function manualUpdateActive($value, $id)
     {
-        $response = '';
-        try {
-            $id = is_array($id) ? $id : intval($id);
-            $activeValue = intval($activeValue);
+        $where = sprintf(
+            '%s IN (%s)',
+            DbTable_Banner::COL_BANNER_ID,
+            $this->_dao->getAdapter()->quote($id)
+        );
+        $params = array(DbTable_Banner::COL_BANNER_ACTIVE => intval($value));
+        return $this->_dao->update($params, $where);
+    }
 
-            $data = array(
-                DbTable_Banner::COL_FK_CONFIG_ACTIVE => $activeValue,
-            );
-            $where = sprintf('%s in (%s)', DbTable_Banner::COL_BANNER_ID, $this->_dao->getAdapter()->quote($id));
-            $this->_dao->update($data, $where);
-            Application_Cache_Default::getInstance()->resetBanner();
-        } catch (Exception $e) {
-            $response = $e->getMessage();
-        }
-        return $response;
+    public function getById($bannerId)
+    {
+        $bannerId = intval($bannerId);
+        $data = $this->_dao->getById($bannerId);
+        return $data ? $data->toArray(): '';
     }
 }
