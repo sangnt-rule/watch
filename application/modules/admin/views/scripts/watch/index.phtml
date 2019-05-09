@@ -35,7 +35,7 @@
                 </form>
                 <br><br>
                 <div class="col-sm-6">
-                    <a href="/banner/edit"><button class="btn btn-success btn-sm">Thêm mới</button></a>
+                    <a href="/watch/edit"><button class="btn btn-success btn-sm">Thêm mới</button></a>
                 </div>
             </div>
             <div class="card-body">
@@ -66,12 +66,12 @@
                             <td><?php echo $data->{DbTable_Watch::COL_WATCH_PRICE}?></td>
                             <td><?php echo $data->{DbTable_Watch::COL_WATCH_SIZE}?></td>
                             <?php
-                            $active = $data->{DbTable_Banner::COL_BANNER_ACTIVE} == Application_Constant_Db_Config_Active::ACTIVE
+                            $active = $data->{DbTable_Watch::COL_WATCH_ACTIVE} == Application_Constant_Db_Config_Active::ACTIVE
                                 ? 'Kích Hoạt' : 'Chưa Kích Hoạt';
                             ?>
                             <td><?php echo $active?></td>
                             <td>
-                                <a href="/banner/edit/id/<?php echo $data->{DbTable_Banner::COL_BANNER_ID}?>">
+                                <a href="/watch/edit/id/<?php echo $data->{DbTable_Watch::COL_WATCH_ID}?>">
                                     <button type="button" class="btn btn-link">
                                         <i class="fa fa-edit"></i> Edit
                                     </button>

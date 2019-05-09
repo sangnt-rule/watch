@@ -1,3 +1,0 @@
-$(function(){
-    AdminCommon.initializeManualUpdate('booking');
-})
