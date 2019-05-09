@@ -24,6 +24,7 @@ class MigrationList
             '2019/05/04/08.add_column_banner.sql',
             '2019/05/04/09.change_column_banner.sql',
             '2019/05/07/01.add_column_table_watch.sql',
+            '2019/05/09/01.add_column_table_watch.sql',
         );
     }
 }

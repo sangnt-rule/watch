@@ -33,16 +33,36 @@ class Admin_Model_Watch extends Application_Singleton
      * @param $priority
      * @return string|null
      */
-    public function insert($name, $priority)
+    public function insert($name,$glasses,$face,$waterproof,$price,$size,$description,$priority,$image,$cord,$machine,$category)
     {
         $name = trim($name);
+        $glasses = trim($glasses);
+        $face = trim($face);
+        $waterproof = trim($waterproof);
+        $price = floatval($price);
+        $size = trim($size);
+        $description = trim($description);
+        $image = trim($image);
+        $cord = intval($cord);
+        $machine = intval($machine);
+        $category = intval($category);
         $priority = intval($priority);
         $result = null;
         try {
             $params = array(
-                DbTable_Machine::COL_MACHINE_NAME => $name,
-                DbTable_Machine::COL_MACHINE_PRIORITY => $priority,
-                DbTable_Machine::COL_MACHINE_ACTIVE => Application_Constant_Db_Config_Active::ACTIVE,
+                DbTable_Watch::COL_WATCH_NAME => $name,
+                DbTable_Watch::COL_WATCH_GLASSES => $glasses,
+                DbTable_Watch::COL_WATCH_FACE => $face,
+                DbTable_Watch::COL_WATCH_WATERPROOF => $waterproof,
+                DbTable_Watch::COL_WATCH_PRICE => $price,
+                DbTable_Watch::COL_WATCH_SIZE => $size,
+                DbTable_Watch::COL_WATCH_DESCRIPTION => $description,
+                DbTable_Watch::COL_WATCH_IMAGE => $image,
+                DbTable_Watch::COL_FK_CORD => $cord,
+                DbTable_Watch::COL_FK_MACHINE => $machine,
+                DbTable_Watch::COL_FK_CATEGORY => $category,
+                DbTable_Watch::COL_WATCH_PRIORITY => $priority,
+                DbTable_Watch::COL_WATCH_ACTIVE => Application_Constant_Db_Config_Active::ACTIVE,
             );
             $this->_dao->insert($params);
         } catch (Exception $e) {

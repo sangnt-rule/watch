@@ -24,6 +24,14 @@ class Admin_Model_Machine extends Application_Singleton
         return $this->_dao->getAll($name, $status);
     }
 
+    public function searchAll()
+    {
+        $name = '';
+        $status = Application_Constant_Db_Config_Active::ACTIVE ;
+        $query = $this->getAll($name,$status);
+        return $this->_dao->fetchAll($query)->toArray();
+    }
+
     /**
      * @param $name
      * @param $priority
