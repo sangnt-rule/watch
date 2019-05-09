@@ -69,7 +69,7 @@ class Zend_Service_Amazon_Ec2_Image extends Zend_Service_Amazon_Ec2_Abstract
 
     /**
      * Returns information about AMIs, AKIs, and ARIs available to the user.
-     * Information returned includes image type, product codes, architecture,
+     * Information returned includes image type, watch codes, architecture,
      * and kernel and RAM disk IDs. Images available to the user include public
      * images available for any user to launch, private images owned by the user
      * making the request, and private images owned by other users for which the
@@ -186,9 +186,9 @@ class Zend_Service_Amazon_Ec2_Image extends Zend_Service_Amazon_Ec2_Abstract
      *       launchPermission:  Controls who has permission to launch the AMI. Launch permissions
      *                          can be granted to specific users by adding userIds.
      *                          To make the AMI public, add the all group.
-     *       productCodes:      Associates a product code with AMIs. This allows developers to
+     *       productCodes:      Associates a watch code with AMIs. This allows developers to
      *                          charge users for using AMIs. The user must be signed up for the
-     *                          product before they can launch the AMI. This is a write once attribute;
+     *                          watch before they can launch the AMI. This is a write once attribute;
      *                          after it is set, it cannot be changed or removed.
      *
      * @param string $imageId                   AMI ID to modify.
@@ -204,8 +204,8 @@ class Zend_Service_Amazon_Ec2_Image extends Zend_Service_Amazon_Ec2_Abstract
      * @param string|array $userGroup           User groups to add to or remove from the launchPermission attribute.
      *                                          Currently, the all group is available, which will make it a public AMI.
      *                                          Required for launchPermssion Attribute
-     * @param string $productCode               Attaches a product code to the AMI. Currently only one product code
-     *                                          can be associated with an AMI. Once set, the product code cannot be changed or reset.
+     * @param string $productCode               Attaches a watch code to the AMI. Currently only one watch code
+     *                                          can be associated with an AMI. Once set, the watch code cannot be changed or reset.
      *                                          Required for productCodes Attribute
      * @return boolean
      */
@@ -292,7 +292,7 @@ class Zend_Service_Amazon_Ec2_Image extends Zend_Service_Amazon_Ec2_Abstract
             }
         }
 
-        // check for product codes
+        // check for watch codes
         if($attribute == 'productCodes') {
             $pCnodes = $xpath->query('//ec2:productCodes/ec2:item');
             if($pCnodes->length > 0) {

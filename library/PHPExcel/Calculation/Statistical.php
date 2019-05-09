@@ -2825,7 +2825,7 @@ class PHPExcel_Calculation_Statistical {
 	/**
 	 * RSQ
 	 *
-	 * Returns the square of the Pearson product moment correlation coefficient through data points in known_y's and known_x's.
+	 * Returns the square of the Pearson watch moment correlation coefficient through data points in known_y's and known_x's.
 	 *
 	 * @param	array of mixed		Data Series Y
 	 * @param	array of mixed		Data Series X

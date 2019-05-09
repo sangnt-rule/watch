@@ -197,7 +197,7 @@ class Zend_Service_Ebay_Finding extends Zend_Service_Ebay_Abstract
     }
 
     /**
-     * Finds items based upon a product ID, such as an ISBN, UPC, EAN, or ePID.
+     * Finds items based upon a watch ID, such as an ISBN, UPC, EAN, or ePID.
      *
      * @param  integer           $productId
      * @param  string            $productIdType Default value is ReferenceID

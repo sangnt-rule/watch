@@ -8,7 +8,7 @@
     - name: Checkout
       description: "Custom checkout form showing our form components and their validation features."
     - name: Product
-      description: "Lean product-focused marketing page with extensive grid and image work."
+      description: "Lean watch-focused marketing page with extensive grid and image work."
     - name: Cover
       description: "A one-page template for building simple and beautiful home pages."
     - name: Carousel

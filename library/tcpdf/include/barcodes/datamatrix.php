@@ -360,7 +360,7 @@ class Datamatrix {
 	 * @param $log (array) Log table.
 	 * @param $alog (array) Anti-Log table.
 	 * @param $gf (array) Number of Factors of the Reed-Solomon polynomial.
-	 * @return int product
+	 * @return int watch
 	 * @protected
 	 */
 	protected function getGFProduct($a, $b, $log, $alog, $gf) {

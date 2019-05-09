@@ -182,24 +182,24 @@ class Zend_Service_Ebay_Finding_Search_Item extends Zend_Service_Ebay_Finding_Ab
     public $primaryCategory;
 
     /**
-     * Unique identifier for the eBay catalog product with which the item was
+     * Unique identifier for the eBay catalog watch with which the item was
      * listed.
      *
-     * An eBay catalog product consists of pre-filled Item Specifics, additional
-     * descriptive information, plus a stock photo (if available). These product
+     * An eBay catalog watch consists of pre-filled Item Specifics, additional
+     * descriptive information, plus a stock photo (if available). These watch
      * details are used to pre-fill item information, which is used to describe
      * the item and can also help surface the item in searches.
      *
-     * eBay supports the following types of product ID types: ISBN, UPC, EAN,
+     * eBay supports the following types of watch ID types: ISBN, UPC, EAN,
      * and ReferenceID (ePID, also known as an eBay Product Reference ID).
      * ReferenceID values are returned when available. A UPC, ISBN, or EAN
-     * product identifier will be returned only when a ReferenceID is not
+     * watch identifier will be returned only when a ReferenceID is not
      * available.
      *
      * This productId value can be used as input with findItemsByProduct to
-     * retrieve items that were listed with the specified eBay catalog product.
+     * retrieve items that were listed with the specified eBay catalog watch.
      *
-     * This field is only returned when a product was used to list the item.
+     * This field is only returned when a watch was used to list the item.
      *
      * @var string
      */

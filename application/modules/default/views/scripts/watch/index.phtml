@@ -1,39 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Product</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--===============================================================================================-->
-    <link rel="icon" type="image/png" href="images/icons/favicon.png"/>
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="fonts/themify/themify-icons.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="fonts/elegant-font/html-css/style.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="vendor/noui/nouislider.min.css">
-    <!--===============================================================================================-->
-    <link rel="stylesheet" type="text/css" href="css/util.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
-    <!--===============================================================================================-->
-</head>
-<body class="animsition">
+
 
 <!-- Title Page -->
 <section class="bg-title-page p-t-50 p-b-40 flex-col-c-m" style="background-image: url(images/heading-pages-02.jpg);">
@@ -68,11 +33,46 @@
             <br><br><br><br>
         </div>
         <div class="row">
+            <?php foreach($this->watch as $value) { ?>
+                <div class="col-sm-6 col-md-3 col-lg-3 p-b-50">
+                    <!-- Block2 -->
+                    <div class="block2">
+                        <div class="block2-img wrap-pic-w of-hidden pos-relative">
+                            <img src="<?php echo $value[DbTable_Watch::COL_WATCH_WATERPROOF]; ?>" alt="IMG-PRODUCT">
+
+                            <div class="block2-overlay trans-0-4">
+                                <a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+                                    <i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+                                    <i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+                                </a>
+
+                                <div class="block2-btn-addcart w-size1 trans-0-4">
+                                    <!-- Button -->
+                                    <a href="/detail-watch-"<?php echo $value[DbTable_Watch::COL_WATCH_ID]?>".html">
+                                        <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+                                            Xem sản phẩm
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block2-txt p-t-20">
+                            <a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
+                                <?php echo $value[DbTable_Watch::COL_WATCH_NAME]; ?>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            <?php }?>
+        </div>
+        <div class="row">
             <?php for($i=0; $i<=8; $i++) {?>
                 <div class="col-sm-6 col-md-3 col-lg-3 p-b-50">
                     <!-- Block2 -->
                     <div class="block2">
-                        <div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
+                        <div class="block2-img wrap-pic-w of-hidden pos-relative">
                             <img src="images/item-02.jpg" alt="IMG-PRODUCT">
 
                             <div class="block2-overlay trans-0-4">
@@ -83,7 +83,7 @@
 
                                 <div class="block2-btn-addcart w-size1 trans-0-4">
                                     <!-- Button -->
-                                    <a href="/detail-product.html">
+                                    <a href="/detail-watch.html">
                                         <button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
                                             Xem sản phẩm
                                         </button>
@@ -97,9 +97,6 @@
                                 Herschel supply co 25l
                             </a>
 
-                            <span class="block2-price m-text6 p-r-5">
-										$75.00
-									</span>
                         </div>
                     </div>
                 </div>
@@ -193,5 +190,3 @@
 <!--===============================================================================================-->
 <script src="js/main.js"></script>
 
-</body>
-</html>

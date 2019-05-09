@@ -62,7 +62,7 @@ class PHPExcel_Shared_JAMA_LUDecomposition {
 	 */
 	public function __construct($A) {
 		if ($A instanceof PHPExcel_Shared_JAMA_Matrix) {
-			// Use a "left-looking", dot-product, Crout/Doolittle algorithm.
+			// Use a "left-looking", dot-watch, Crout/Doolittle algorithm.
 			$this->LU = $A->getArray();
 			$this->m  = $A->getRowDimension();
 			$this->n  = $A->getColumnDimension();
@@ -81,7 +81,7 @@ class PHPExcel_Shared_JAMA_LUDecomposition {
 				// Apply previous transformations.
 				for ($i = 0; $i < $this->m; ++$i) {
 					$LUrowi = $this->LU[$i];
-					// Most of the time is spent in the following dot product.
+					// Most of the time is spent in the following dot watch.
 					$kmax = min($i,$j);
 					$s = 0.0;
 					for ($k = 0; $k < $kmax; ++$k) {

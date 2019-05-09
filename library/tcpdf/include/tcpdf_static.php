@@ -1636,7 +1636,7 @@ class TCPDF_STATIC {
 	}
 
 	/**
-	 * Get the product of two SVG tranformation matrices
+	 * Get the watch of two SVG tranformation matrices
 	 * @param $ta (array) first SVG tranformation matrix
 	 * @param $tb (array) second SVG tranformation matrix
 	 * @return transformation array
