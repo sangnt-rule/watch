@@ -1,7 +1,18 @@
 <?php
-$name = $this->machine[DbTable_Machine::COL_MACHINE_NAME] ?? '';
-$id = $this->machine[DbTable_Machine::COL_MACHINE_ID] ?? '';
-$priority = $this->machine[DbTable_Machine::COL_MACHINE_PRIORITY] ?? '';
+$watch = $this->watch;
+$name = $watch[DbTable_Watch::COL_WATCH_NAME] ?? '';
+$glasses = $watch[DbTable_Watch::COL_WATCH_GLASSES] ?? '';
+$face = $watch[DbTable_Watch::COL_WATCH_FACE] ?? '';
+$waterProof = $watch[DbTable_Watch::COL_WATCH_WATERPROOF] ?? '';
+$price = $watch[DbTable_Watch::COL_WATCH_PRICE] ?? '';
+$size = $watch[DbTable_Watch::COL_WATCH_SIZE] ?? '';
+$description = $watch[DbTable_Watch::COL_WATCH_DESCRIPTION] ?? '';
+$priority = $watch[DbTable_Watch::COL_WATCH_PRIORITY] ?? '';
+$image = $watch[DbTable_Watch::COL_WATCH_IMAGE] ?? '';
+$machineId = $watch[DbTable_Watch::COL_FK_MACHINE] ?? '';
+$categoryId = $watch[DbTable_Watch::COL_FK_CATEGORY] ?? '';
+$cordId = $watch[DbTable_Watch::COL_FK_CORD] ?? '';
+$id = $watch[DbTable_Watch::COL_WATCH_ID] ?? '';
 ?>
 <div class="breadcrumbs">
     <div class="col-sm-8">
@@ -31,7 +42,7 @@ $priority = $this->machine[DbTable_Machine::COL_MACHINE_PRIORITY] ?? '';
                             <label for="hf-email" class=" form-control-label">Tên đồng hồ : </label>
                         </div>
                         <div class="col-12 col-md-6">
-                            <input type="text" name="name" placeholder="FA0001,.." class="form-control validate[required]" value="">
+                            <input type="text" name="name" placeholder="FA0001,.." class="form-control validate[required]" value="<?php echo $name?>">
                         </div>
                     </div>
                     <div class="row form-group">
@@ -39,7 +50,7 @@ $priority = $this->machine[DbTable_Machine::COL_MACHINE_PRIORITY] ?? '';
                             <label for="hf-password" class=" form-control-label">Loại kính :</label>
                         </div>
                         <div class="col-12 col-md-6">
-                            <input type="text" name="glasses" placeholder="Kính cứng, shaphie" class="form-control validate[required]" value="">
+                            <input type="text" name="glasses" placeholder="Kính cứng, shaphie" class="form-control validate[required]" value="<?php echo $glasses?>">
                         </div>
                     </div>
                     <div class="row form-group">
@@ -47,7 +58,7 @@ $priority = $this->machine[DbTable_Machine::COL_MACHINE_PRIORITY] ?? '';
                             <label for="hf-password" class=" form-control-label">Mặt đồng hồ :</label>
                         </div>
                         <div class="col-12 col-md-6">
-                            <input type="text" name="face" placeholder="Tròn, vuông" class="form-control validate[required]" value="">
+                            <input type="text" name="face" placeholder="Tròn, vuông" class="form-control validate[required]" value="<?php echo $face?>">
                         </div>
                     </div>
                     <div class="row form-group">
@@ -55,7 +66,7 @@ $priority = $this->machine[DbTable_Machine::COL_MACHINE_PRIORITY] ?? '';
                             <label for="hf-password" class=" form-control-label">Chống nước :</label>
                         </div>
                         <div class="col-12 col-md-6">
-                            <input type="text" name="waterproof	" placeholder="5ATM, 10ATM,.." class="form-control validate[required]" value="">
+                            <input type="text" name="waterproof" placeholder="5ATM, 10ATM,.." class="form-control validate[required]" value="<?php echo $waterProof?>">
                         </div>
                     </div>
                     <div class="row form-group">
@@ -63,7 +74,7 @@ $priority = $this->machine[DbTable_Machine::COL_MACHINE_PRIORITY] ?? '';
                             <label for="hf-password" class=" form-control-label">Giá :</label>
                         </div>
                         <div class="col-12 col-md-6">
-                            <input type="text" name="price" placeholder="50000000, 2000000,.." class="form-control validate[required]" value="">
+                            <input type="text" name="price" placeholder="50000000, 2000000,.." class="form-control validate[required]" value="<?php echo $price?>">
                         </div>
                     </div>
                     <div class="row form-group">
@@ -71,7 +82,7 @@ $priority = $this->machine[DbTable_Machine::COL_MACHINE_PRIORITY] ?? '';
                             <label for="hf-password" class=" form-control-label">Kích thước :</label>
                         </div>
                         <div class="col-12 col-md-6">
-                            <input type="text" name="size" placeholder="38, 40,.." class="form-control validate[required]" value="">
+                            <input type="text" name="size" placeholder="38, 40,.." class="form-control validate[required]" value="<?php echo $size?>">
                         </div>
                     </div>
                     <div class="row form-group">
@@ -79,7 +90,7 @@ $priority = $this->machine[DbTable_Machine::COL_MACHINE_PRIORITY] ?? '';
                             <label for="hf-password" class=" form-control-label">Mô tả :</label>
                         </div>
                         <div class="col-12 col-md-6">
-                            <textarea name="description" id="description" cols="30" rows="10"></textarea>
+                            <textarea name="description" id="description" cols="30" rows="10"><?php echo $description?></textarea>
                         </div>
                     </div>
                     <div class="row form-group">
@@ -87,15 +98,16 @@ $priority = $this->machine[DbTable_Machine::COL_MACHINE_PRIORITY] ?? '';
                             <label for="hf-password" class=" form-control-label">Độ ưu tiên :</label>
                         </div>
                         <div class="col-12 col-md-6">
-                            <input type="text" name="priority" placeholder="" class="form-control validate[required]" value="">
+                            <input type="text" name="priority" placeholder="" class="form-control validate[required]" value="<?php echo $priority?>">
                         </div>
                     </div>
                     <div class="row form-group">
                         <div class="col col-md-3">
-                            <label for="hf-password" class=" form-control-label">Độ ưu tiên :</label>
+                            <label for="hf-password" class=" form-control-label">Hình ảnh :</label>
                         </div>
                         <div class="col-12 col-md-6">
-                            <input type="file" name="image" placeholder="" class="form-control validate[required]" value="">
+                            <input type="file" name="image" placeholder="" class="form-control <?php echo !$image ? 'validate[required]' : ''?>" value="">
+                            <input type="hidden" name="oldImage" placeholder="" class="form-control validate[required]" value="<?php echo $image?>">
                         </div>
                     </div>
                     <div class="row form-group">
@@ -105,7 +117,8 @@ $priority = $this->machine[DbTable_Machine::COL_MACHINE_PRIORITY] ?? '';
                         <div class="col-12 col-md-6">
                             <select name="machine" id="">
                             <?php foreach ($this->machineData as $machine){?>
-                                <option value="<?php echo $machine[DbTable_Machine::COL_MACHINE_ID]?>">
+                                <?php $selected = $machine[DbTable_Machine::COL_MACHINE_ID] == $machineId ? 'selected' : ''?>
+                                <option value="<?php echo $machine[DbTable_Machine::COL_MACHINE_ID]?>" <?php echo $selected?>>
                                     <?php echo $machine[DbTable_Machine::COL_MACHINE_NAME]?>
                                 </option>
                             <?php }?>
@@ -119,7 +132,8 @@ $priority = $this->machine[DbTable_Machine::COL_MACHINE_PRIORITY] ?? '';
                         <div class="col-12 col-md-6">
                             <select name="cord" id="">
                             <?php foreach ($this->cordData as $cord){?>
-                                <option value="<?php echo $cord[DbTable_Cord::COL_CORD_ID]?>">
+                                <?php $selected = $cord[DbTable_Cord::COL_CORD_ID] == $cordId ? 'selected' : ''?>
+                                <option value="<?php echo $cord[DbTable_Cord::COL_CORD_ID]?>" <?php echo $selected?>>
                                     <?php echo $cord[DbTable_Cord::COL_CORD_NAME]?>
                                 </option>
                             <?php }?>
@@ -133,7 +147,8 @@ $priority = $this->machine[DbTable_Machine::COL_MACHINE_PRIORITY] ?? '';
                         <div class="col-12 col-md-6">
                             <select name="category" id="">
                             <?php foreach ($this->categoryData as $category){?>
-                                <option value="<?php echo $category[DbTable_Category::COL_CATEGORY_ID]?>">
+                                <?php $selected = $category[DbTable_Category::COL_CATEGORY_ID] == $categoryId ? 'selected' : ''?>
+                                <option value="<?php echo $category[DbTable_Category::COL_CATEGORY_ID]?>" <?php echo $selected?>>
                                     <?php echo $category[DbTable_Category::COL_CATEGORY_NAME]?>
                                 </option>
                             <?php }?>
@@ -142,7 +157,7 @@ $priority = $this->machine[DbTable_Machine::COL_MACHINE_PRIORITY] ?? '';
                     </div>
                 </div>
                 <div class="card-footer">
-                    <input type="hidden" name="id" value="">
+                    <input type="hidden" name="id" value="<?php echo $id?>">
                     <button type="submit" class="btn btn-primary">
                         <i class="fa fa-dot-circle-o"></i> Submit
                     </button>

@@ -82,6 +82,8 @@ class Admin_Model_Dao_Watch extends DbTable_Watch
                     DbTable_Watch::COL_FK_CORD,
                     DbTable_Watch::COL_FK_MACHINE,
                     DbTable_Watch::COL_FK_CATEGORY,
+                    DbTable_Watch::COL_WATCH_IMAGE,
+                    DbTable_Watch::COL_WATCH_WATERPROOF,
                 )
             )
             ->where(DbTable_Watch::COL_WATCH_ID.'=?', $id)

@@ -74,24 +74,54 @@ class Admin_Model_Watch extends Application_Singleton
     /**
      * @param $id
      * @param $name
+     * @param $glasses
+     * @param $face
+     * @param $waterproof
+     * @param $price
+     * @param $size
+     * @param $description
      * @param $priority
+     * @param $image
+     * @param $cord
+     * @param $machine
+     * @param $category
      * @return string|null
      */
-    public function update($id, $name, $priority)
+    public function update($id,$name,$glasses,$face,$waterproof,$price,$size,$description,$priority,$image,$cord,$machine,$category)
     {
         $id = intval($id);
         $name = trim($name);
+        $glasses = trim($glasses);
+        $face = trim($face);
+        $waterproof = trim($waterproof);
+        $price = floatval($price);
+        $size = trim($size);
+        $description = trim($description);
+        $image = trim($image);
+        $cord = intval($cord);
+        $machine = intval($machine);
+        $category = intval($category);
         $priority = intval($priority);
         $result = null;
         try {
             $params = array(
-                DbTable_Machine::COL_MACHINE_NAME => $name,
-                DbTable_Machine::COL_MACHINE_PRIORITY => $priority,
-                DbTable_Machine::COL_MACHINE_ACTIVE => Application_Constant_Db_Config_Active::ACTIVE,
+                DbTable_Watch::COL_WATCH_NAME => $name,
+                DbTable_Watch::COL_WATCH_GLASSES => $glasses,
+                DbTable_Watch::COL_WATCH_FACE => $face,
+                DbTable_Watch::COL_WATCH_WATERPROOF => $waterproof,
+                DbTable_Watch::COL_WATCH_PRICE => $price,
+                DbTable_Watch::COL_WATCH_SIZE => $size,
+                DbTable_Watch::COL_WATCH_DESCRIPTION => $description,
+                DbTable_Watch::COL_WATCH_IMAGE => $image,
+                DbTable_Watch::COL_FK_CORD => $cord,
+                DbTable_Watch::COL_FK_MACHINE => $machine,
+                DbTable_Watch::COL_FK_CATEGORY => $category,
+                DbTable_Watch::COL_WATCH_PRIORITY => $priority,
+                DbTable_Watch::COL_WATCH_ACTIVE => Application_Constant_Db_Config_Active::ACTIVE,
             );
             $where = sprintf(
                 '%s IN (%s)',
-                DbTable_Machine::COL_MACHINE_ID,
+                DbTable_Watch::COL_WATCH_ID,
                 $this->_dao->getAdapter()->quote($id)
             );
             $this->_dao->update($params, $where);
@@ -112,10 +142,10 @@ class Admin_Model_Watch extends Application_Singleton
     {
         $where = sprintf(
             '%s IN (%s)',
-            DbTable_Machine::COL_MACHINE_ID,
+            DbTable_Watch::COL_WATCH_ID,
             $this->_dao->getAdapter()->quote($id)
         );
-        $params = array(DbTable_Machine::COL_MACHINE_ACTIVE => intval($value));
+        $params = array(DbTable_Watch::COL_WATCH_ACTIVE => intval($value));
         return $this->_dao->update($params, $where);
     }
 }

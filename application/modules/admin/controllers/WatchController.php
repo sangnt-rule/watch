@@ -46,7 +46,6 @@ class Admin_WatchController extends Application_Controller_BackEnd_Admin
         $cord = $this->getRequest()->getParam('cord');
         $category = $this->getRequest()->getParam('category');
         $oldImage = $this->getRequest()->getParam('oldImage');
-
         $image = $oldImage;
         $elementName = 'image';
         $valid_file_extensions = array(".jpg", ".jpeg", ".gif", ".png");
@@ -69,10 +68,11 @@ class Admin_WatchController extends Application_Controller_BackEnd_Admin
                 $message = Admin_Model_Watch::getInstance()->update($id,$name,$glasses,$face,$waterproof,$price,$size,$description,$priority,$image,$cord,$machine,$category);
             }
             if(!$message){
+                $url = 'watch';
                 $message = 'Thêm thành công';
             }else{
                 $message = 'Thêm thất bại';
-                $url = 'watch/edit/id='.$id;
+                $url = 'watch/edit/id/'.$id;
             }
         }
 
@@ -82,7 +82,7 @@ class Admin_WatchController extends Application_Controller_BackEnd_Admin
 
     public function manualUpdateAction()
     {
-        /*$manualUpdateId = $this->getRequest()->getParam('manualUpdateId');
+        $manualUpdateId = $this->getRequest()->getParam('manualUpdateId');
         $manualUpdateAction = $this->getRequest()->getParam('manualUpdateAction');
         $manualUpdateUrl = $this->getRequest()->getParam('manualUpdateUrl');
         $manualUpdateAction = strtolower(trim($manualUpdateAction));
@@ -94,11 +94,11 @@ class Admin_WatchController extends Application_Controller_BackEnd_Admin
             );
             if (in_array($manualUpdateAction, array_keys($activeData))) {
                 $valueActive = $activeData[$manualUpdateAction];
-                Admin_Model_Banner::getInstance()->manualUpdateActive($valueActive, $idValue);
+                Admin_Model_Watch::getInstance()->manualUpdateActive($valueActive, $idValue);
             }
         }
 
         $this->gotoUrl($manualUpdateUrl);
-        $this->noRender();*/
+        $this->noRender();
     }
 }
