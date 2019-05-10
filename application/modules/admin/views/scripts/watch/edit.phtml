@@ -149,6 +149,7 @@ $id = $watch[DbTable_Watch::COL_WATCH_ID] ?? '';
                         </div>
                         <div class="col-12 col-md-6">
                             <select name="category" id="">
+                                <option value="0">chọn</option>
                             <?php foreach ($this->categoryData as $category){?>
                                 <?php $selected = $category[DbTable_Category::COL_CATEGORY_ID] == $categoryId ? 'selected' : ''?>
                                 <option value="<?php echo $category[DbTable_Category::COL_CATEGORY_ID]?>" <?php echo $selected?>>

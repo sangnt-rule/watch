@@ -17,10 +17,25 @@
             <div class="card-header">
                 <form>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" name="title" placeholder="Tìm kiếm tên danh mục..." value="<?php echo $this->title?>">
+                        <input type="text" class="form-control" name="name" placeholder="Tìm kiếm tên sản phẩm..." value="<?php echo $this->name?>">
                     </div>
-                    <div class="col-sm-6">
-                        <input type="text" class="form-control" name="content" placeholder="Tìm kiếm tên danh mục..." value="<?php echo $this->content?>">
+                    <div class="col-12 col-sm-2">
+                        <select name="machineId" id="machineId" class="form-control">
+                            <option value="0">Loại máy</option>
+                            <?php foreach ($this->machineData as $machine){?>
+                                <?php $select = $machine[DbTable_Machine::COL_MACHINE_ID] == $this->machineId ? 'selected' : ''?>
+                                <option value="<?php echo $machine[DbTable_Machine::COL_MACHINE_ID]?>" <?php echo $select?>><?php echo $machine[DbTable_Machine::COL_MACHINE_NAME]?></option>
+                            <?php }?>
+                        </select>
+                    </div>
+                    <div class="col-12 col-sm-2">
+                        <select name="cordId" id="cordId" class="form-control">
+                            <option value="0">Loại dây</option>
+                            <?php foreach ($this->cordData as $cord){?>
+                                <?php $select = $cord[DbTable_Cord::COL_CORD_ID] == $this->coreId ? 'selected' : ''?>
+                                <option value="<?php echo $cord[DbTable_Cord::COL_CORD_ID]?>" <?php echo $select?>><?php echo $cord[DbTable_Cord::COL_CORD_NAME]?></option>
+                            <?php }?>
+                        </select>
                     </div>
                     <div class="col-12 col-sm-2">
                         <select name="active" id="active" class="form-control">

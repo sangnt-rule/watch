@@ -10,10 +10,14 @@ class Admin_WatchController extends Application_Controller_BackEnd_Admin
         $this->loadGird(
             Admin_Model_Watch::getInstance()->getAll($name, $machineId, $cordId, $active)
         );
+        $cordData = Admin_Model_Cord::getInstance()->getAll();
+        $machineData = Admin_Model_Machine::getInstance()->searchAll();
         $this->view->assign('name',$name);
         $this->view->assign('machineId',$machineId);
         $this->view->assign('cordId',$cordId);
         $this->view->assign('active',$active);
+        $this->view->assign('cordData',$cordData);
+        $this->view->assign('machineData',$machineData);
     }
 
     public function editAction()
