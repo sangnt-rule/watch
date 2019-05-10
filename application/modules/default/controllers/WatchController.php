@@ -12,6 +12,8 @@ class WatchController extends Application_Controller_FrontEnd
     }
     public function detailAction()
     {
+        echo 111111111111111111;
+        die;
 
     }
 
