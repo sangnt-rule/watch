@@ -54,4 +54,19 @@ class Model_Dao_Watch extends DbTable_Watch
         return $this->fetchAll($select);
     }
 
+    public function search($idMachine, $idCord, $search)
+    {
+        $select = $this->select()->setIntegrityCheck(false)
+            ->from(DbTable_Watch::_tableName)
+            ->where(DbTable_Watch::COL_FK_MACHINE.'=?', $idMachine);
+        if($idCord){
+            $select->where(DbTable_Watch::COL_FK_CORD.'=?',$idCord);
+        }
+        if($search){
+            $select->where(DbTable_Watch::COL_WATCH_NAME.' like', '%'.$search.'%');
+        }
+        return $this->fetchAll($select);
+
+    }
+
 }

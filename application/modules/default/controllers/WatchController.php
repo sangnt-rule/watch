@@ -9,6 +9,11 @@ class WatchController extends Application_Controller_FrontEnd
         $this->view->assign('watch', $data);
 
     }
+    public function search()
+    {
+
+
+    }
     public function detailAction()
     {
 
