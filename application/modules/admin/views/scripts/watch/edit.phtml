@@ -109,6 +109,9 @@ $id = $watch[DbTable_Watch::COL_WATCH_ID] ?? '';
                             <input type="file" name="image" placeholder="" class="form-control <?php echo !$image ? 'validate[required]' : ''?>" value="">
                             <input type="hidden" name="oldImage" placeholder="" class="form-control validate[required]" value="<?php echo $image?>">
                         </div>
+                        <?php if($image){?>
+                            <div class="col-12 col-md-6"><?php echo $this->image($image)?></div>
+                        <?php }?>
                     </div>
                     <div class="row form-group">
                         <div class="col col-md-3">
