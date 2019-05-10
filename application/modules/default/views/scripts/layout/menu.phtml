@@ -9,14 +9,14 @@
         </div>
 
         <span class="topbar-child1">
-					Free shipping for standard order over $100
-				</span>
+            Chào mừng bạn đến với chúng tôi!
+		</span>
 
     </div>
 
     <div class="wrap_header">
         <!-- Logo -->
-        <a href="index.html" class="logo">
+        <a href="/" class="logo">
             <img src="images/icons/logo.png" alt="IMG-LOGO">
         </a>
 
@@ -25,27 +25,22 @@
             <nav class="menu">
                 <ul class="main_menu">
                     <li>
-                        <a href="index.html">Trang Chủ</a>
+                        <a href="/">Trang Chủ</a>
                     </li>
-
-                    <li>
-                        <a href="/product.html">Đồng Hồ Cơ</a>
-                        <ul class="sub_menu">
-                            <li><a href="/product.html">Đồng Hồ Watch V1</a></li>
-                            <li><a href="cart.html">Đồng Hồ Watch V2</a></li>
-                            <li><a href="blog.html">Đồng Hồ Watch V3</a></li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a href="product.html">Đồng Hồ Pin</a>
-                        <ul class="sub_menu">
-                            <li><a href="product.html">Đồng Hồ Watch P1</a></li>
-                            <li><a href="cart.html">Đồng Hồ Watch P2</a></li>
-                            <li><a href="blog.html">Đồng Hồ Watch P3</a></li>
-                        </ul>
-                    </li>
-
+                    <?php
+                       foreach ($this->machine as $value){
+                           echo "<li>";
+                               echo "<a href='/machine-".$value[DbTable_Machine::COL_MACHINE_ID].".html'>".$value[DbTable_Machine::COL_MACHINE_NAME]."</a>";
+                                  echo "<ul class='sub_menu'>";
+                                  foreach ($this->cord as $val){
+                                      echo "<li>";
+                                          echo "<a href='/machine-".$value[DbTable_Machine::COL_MACHINE_ID]."/watch-".$val[DbTable_Cord::COL_CORD_ID].".html'>".$val[DbTable_Cord::COL_CORD_NAME]."</a>";
+                                      echo "</li>";
+                                  }
+                                  echo "</ul>";
+                           echo "</li>";
+                       }
+                    ?>
                     <li>
                         <a href="/about-us.html">Về Chúng Tôi</a>
                     </li>

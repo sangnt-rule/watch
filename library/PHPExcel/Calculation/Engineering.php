@@ -2141,7 +2141,7 @@ class PHPExcel_Calculation_Engineering {
 	/**
 	 * IMPRODUCT
 	 *
-	 * Returns the product of two or more complex numbers in x + yi or x + yj text format.
+	 * Returns the watch of two or more complex numbers in x + yi or x + yj text format.
 	 *
 	 * Excel Function:
 	 *		IMPRODUCT(complexNumber[,complexNumber[,...]])

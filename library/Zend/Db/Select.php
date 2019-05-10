@@ -403,7 +403,7 @@ class Zend_Db_Select
 
     /**
      * Add a CROSS JOIN table and colums to the query.
-     * A cross join is a cartesian product; there is no join condition.
+     * A cross join is a cartesian watch; there is no join condition.
      *
      * The $name and $cols parameters follow the same logic
      * as described in the from() method.

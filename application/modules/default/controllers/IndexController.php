@@ -8,23 +8,22 @@ class IndexController extends Application_Controller_FrontEnd
 //    }
     public function indexAction()
     {
-//        # Slider
-//        $this->view->assign(
-//            'sliderData',
-//            Model_Slider::getInstance()->searchByLocaleId(1)
-//        );
-//        # Slider
-//
-//
-//
-//        ##########################
-//        $this->view->assign(
-//            'banner',
-//            Model_Banner::getInstance()->getByOriginalAndLocale(
-//                Application_Constant_Db_Banner::HOMEPAGE,
-//                1
-//            )
-//        );
+        $this->view->assign(
+            'new',
+            Model_Watch::getInstance()->getByNew()
+        );
+        $this->view->assign(
+            'hot',
+            Model_Watch::getInstance()->getByHot()
+        );
+        $this->view->assign(
+            'upcoming',
+            Model_Watch::getInstance()->getByUncoming()
+        );
+        $this->view->assign(
+            'banner',
+            Model_Banner::getInstance()->getAll()
+        );
 
     }
     public function submitIndexAction()

@@ -147,7 +147,7 @@ class Application_MassUpload_Excel_Component_AdminProductMassInsert extends Appl
             }
         }
 
-        #Validate product type
+        #Validate watch type
         $type = $row[Application_MassUpload_Excel_Constant_AdminProductMassInsert::TYPE];
         if ($type) {
             $typeInfo = Admin_Model_ProductType::getInstance()->getById($type);

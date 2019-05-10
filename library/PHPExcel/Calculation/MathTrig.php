@@ -123,7 +123,7 @@ class PHPExcel_Calculation_MathTrig {
 	 * CEILING
 	 *
 	 * Returns number rounded up, away from zero, to the nearest multiple of significance.
-	 *		For example, if you want to avoid using pennies in your prices and your product is
+	 *		For example, if you want to avoid using pennies in your prices and your watch is
 	 *		priced at $4.42, use the formula =CEILING(4.42,0.05) to round prices up to the
 	 *		nearest nickel.
 	 *
@@ -701,7 +701,7 @@ class PHPExcel_Calculation_MathTrig {
 	/**
 	 * MULTINOMIAL
 	 *
-	 * Returns the ratio of the factorial of a sum of values to the product of factorials.
+	 * Returns the ratio of the factorial of a sum of values to the watch of factorials.
 	 *
 	 * @param	array of mixed		Data Series
 	 * @return	float
@@ -795,7 +795,7 @@ class PHPExcel_Calculation_MathTrig {
 	/**
 	 * PRODUCT
 	 *
-	 * PRODUCT returns the product of all the values and cells referenced in the argument list.
+	 * PRODUCT returns the watch of all the values and cells referenced in the argument list.
 	 *
 	 * Excel Function:
 	 *		PRODUCT(value1[,value2[, ...]])

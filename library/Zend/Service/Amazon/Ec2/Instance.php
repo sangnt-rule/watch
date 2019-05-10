@@ -422,16 +422,16 @@ class Zend_Service_Amazon_Ec2_Instance extends Zend_Service_Amazon_Ec2_Abstract
     }
 
     /**
-     * Returns true if the specified product code is attached to the specified instance.
-     * The operation returns false if the product code is not attached to the instance.
+     * Returns true if the specified watch code is attached to the specified instance.
+     * The operation returns false if the watch code is not attached to the instance.
      *
      * The confirmProduct operation can only be executed by the owner of the AMI.
      * This feature is useful when an AMI owner is providing support and wants to
      * verify whether a user's instance is eligible.
      *
-     * @param string $productCode           The product code to confirm.
-     * @param string $instanceId            The instance for which to confirm the product code.
-     * @return array|boolean                An array if the product code is attached to the instance, false if it is not.
+     * @param string $productCode           The watch code to confirm.
+     * @param string $instanceId            The instance for which to confirm the watch code.
+     * @return array|boolean                An array if the watch code is attached to the instance, false if it is not.
      */
     public function confirmProduct($productCode, $instanceId)
     {

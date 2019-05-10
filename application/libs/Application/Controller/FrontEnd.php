@@ -10,107 +10,28 @@ class Application_Controller_FrontEnd extends Application_Controller
     /**
      * @var array
      */
-    private $_menuIntroCategory = array();
+    private $_machine = array();
 
     /**
      * @var array
      */
-    private $_menuValueCategory = array();
-    /**
-     * @var array
-     */
-    private $_menuAboutUsCategory = array();
-
-    /**
-     * @var array
-     */
-    private $_menuFeatureCategory = array();
-
-    /**
-     * @var array
-     */
-    private $_menuNewsCategory = array();
-
-    /**
-     * @var array
-     */
-    private $_menuTourCategory = array();
-
-    /*
-     *  var string
-     * */
-    private $_locale = 'vi';
+    private $_cord = array();
 
     public function init()
     {
         parent::init();
 
-//        #menu AboutUs
-//        $this->_menuAboutUsCategory = Model_AboutUsCategory::getInstance()->searchByLocaleId($this->getCurrentLocaleId());
-//        #menu AboutUs
-//        $this->_menuFeatureCategory = Model_FeatureCategory::getInstance()->searchByLocaleId($this->getCurrentLocaleId());
-//
-//        #$this->_menuProjectCategory = Model_ProjectCategory::getInstance()->searchByLocaleId($this->getCurrentLocaleId());
-//        $this->_menuNewsCategory = Model_NewsCategory::getInstance()->searchByLocaleId($this->getCurrentLocaleId());
-//        $this->_menuIntroCategory = Model_IntroCategory::getInstance()->searchByLocaleId($this->getCurrentLocaleId());
-//        $this->_menuValueCategory = Model_ValueCategory::getInstance()->searchByLocaleId($this->getCurrentLocaleId());
-//        $this->_menuFeatureCategory = Model_FeatureCategory::getInstance()->searchByLocaleId($this->getCurrentLocaleId());
-//        $this->_locale = $this->getCurrentLocale();
-//        $this->_menuTourCategory = Model_TourCategory::getInstance()->searchByLocaleId($this->getCurrentLocaleId());
+        $this->_machine = Model_Machine::getInstance()->getAll();
+
+        $this->_cord = Model_Cord::getInstance()->getAll();
 
     }
 
     public function postDispatch()
     {
-//        parent::postDispatch();
-//        $this->autoLoadResource(array(), 'css');
-//        $this->autoLoadResource(array(), 'js');
-//        $this->view->assign('moduleName', $this->getRequest()->getControllerName());
-//        $this->view->assign('actionName', $this->getRequest()->getActionName());
-//        $this->view->assign('config', $this->getConfig());
-//        $this->view->assign('currentLocale', $this->getCurrentLocale());
-//
-//        $this->view->assign('menuAboutUsCategory', $this->getMenuAboutUsCategory());
-//        $this->view->assign('menuFeatureCategory', $this->getMenuFeatureCategory());
-//        $this->view->assign('menuNewsCategory', $this->getMenuNewsCategory());
-//        $this->view->assign('menuNewsCategory', $this->getMenuNewsCategory());
-//        $this->view->assign('menuIntroCategory', $this->getMenuIntroCategory());
-//        $this->view->assign('menuValueCategory', $this->getMenuValueCategory());
-//        $this->view->assign('menuTourCategory', $this->getMenuTourCategory());
-//
-//
-//        #Footer
-//
-//        $this->view->assign(
-//            'contactInformation',
-//            $this->_helper->filterArray(
-//                Model_Content::getInstance()->searchByOriginalId(Application_Constant_Db_Content::CONTACT_US),
-//                DbTable_Content::COL_FK_LOCALE,
-//                $this->getCurrentLocaleId()
-//            )
-//        );
-//        $this->view->assign(
-//            'socialInformation',
-//            $this->_helper->filterArray(
-//                Model_Content::getInstance()->searchByOriginalId(Application_Constant_Db_Content::SOCIAL_NETWORK),
-//                DbTable_Content::COL_FK_LOCALE,
-//                $this->getCurrentLocaleId()
-//            )
-//        );
-//        $this->view->assign(
-//            'hotline',
-//            $this->_helper->filterArray(
-//                Model_Content::getInstance()->searchByOriginalId(Application_Constant_Db_Content::HOTLINE),
-//                DbTable_Content::COL_FK_LOCALE,
-//                $this->getCurrentLocaleId()
-//            )
-//        );
+        $this->view->assign('machine', $this->_machine);
+        $this->view->assign('cord', $this->_cord);
     }
-
-//    protected function getMenuTourCategory(){
-//        return $this->_menuTourCategory;
-//
-//    }
     protected function renderCaptcha($position=-1, $onlyUpperCase=false)
     {
         $config = Zend_Registry::get('config');
