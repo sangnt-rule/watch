@@ -1,0 +1,1 @@
+ALTER TABLE watch DROP FOREIGN KEY fk_watch_category;

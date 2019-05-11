@@ -6,7 +6,7 @@
                <?php
                $i=0;
                foreach ($this->banner as $value) { ?>
-                    <div class="item-slick1 item1-slick1 banner-<?php echo $i?>" data-image="<?php echo 'upload'.$value[DbTable_Banner::COL_BANNER_IMAGE]; ?>">
+                    <div class="item-slick1 item1-slick1 banner-<?php echo $i?>"style="background-image: url(/upload<?php echo $value[DbTable_Banner::COL_BANNER_IMAGE]; ?>?>);">
                         <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
                                 <span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
                                     <?php echo $value[DbTable_Banner::COL_BANNER_CONTENT]; ?>

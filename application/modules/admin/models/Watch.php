@@ -55,7 +55,7 @@ class Admin_Model_Watch extends Application_Singleton
         $image = trim($image);
         $cord = intval($cord);
         $machine = intval($machine);
-        $category = ($category) ;
+        $category = ($category) ? $category : null;
         $priority = intval($priority);
         $result = null;
         try {
@@ -110,7 +110,7 @@ class Admin_Model_Watch extends Application_Singleton
         $image = trim($image);
         $cord = intval($cord);
         $machine = intval($machine);
-        $category = intval($category);
+        $category = ($category) ? $category : null;;
         $priority = intval($priority);
         $result = null;
         try {
