@@ -30,7 +30,17 @@ class Admin_Model_Watch extends Application_Singleton
 
     /**
      * @param $name
+     * @param $glasses
+     * @param $face
+     * @param $waterproof
+     * @param $price
+     * @param $size
+     * @param $description
      * @param $priority
+     * @param $image
+     * @param $cord
+     * @param $machine
+     * @param $category
      * @return string|null
      */
     public function insert($name,$glasses,$face,$waterproof,$price,$size,$description,$priority,$image,$cord,$machine,$category)
@@ -45,7 +55,7 @@ class Admin_Model_Watch extends Application_Singleton
         $image = trim($image);
         $cord = intval($cord);
         $machine = intval($machine);
-        $category = intval($category);
+        $category = ($category) ;
         $priority = intval($priority);
         $result = null;
         try {

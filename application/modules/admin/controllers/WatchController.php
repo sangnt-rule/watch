@@ -72,7 +72,8 @@ class Admin_WatchController extends Application_Controller_BackEnd_Admin
                 $message = Admin_Model_Watch::getInstance()->update($id,$name,$glasses,$face,$waterproof,$price,$size,$description,$priority,$image,$cord,$machine,$category);
             }
             if(!$message){
-                $url = 'watch';
+                //$url = 'watch';
+                $url = 'watch/edit';
                 $message = 'Thêm thành công';
             }else{
                 $message = 'Thêm thất bại';
