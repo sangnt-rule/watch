@@ -110,7 +110,7 @@ $id = $watch[DbTable_Watch::COL_WATCH_ID] ?? '';
                             <input type="hidden" name="oldImage" placeholder="" class="form-control validate[required]" value="<?php echo $image?>">
                         </div>
                         <?php if($image){?>
-                            <div class="col-12 col-md-6"><?php echo $this->image($image)?></div>
+                            <div class="col-12 col-md-6" style="max-width: 150px"><?php echo $this->image($image)?></div>
                         <?php }?>
                     </div>
                     <div class="row form-group">
