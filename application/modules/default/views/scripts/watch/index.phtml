@@ -1,5 +1,5 @@
 <!-- Title Page -->
-<section class="bg-title-page p-t-50 p-b-40 flex-col-c-m" style="background-image: url(images/heading-pages-02.jpg);">
+<section class="bg-title-page p-t-50 p-b-40 flex-col-c-m" style="background-image: url(images/banner_product_detail.jpg);">
     <h2 class="l-text2 t-center">
         Women
     </h2>
@@ -62,7 +62,7 @@
                             </a>
 
                             <span class="block2-price m-text6 p-r-5">
-                                    <?php echo $value[DbTable_Watch::COL_WATCH_PRICE].' VND';?>
+                                    <?php echo Application_Function_Format::price($value[DbTable_Watch::COL_WATCH_PRICE]);?>VND
                                 </span>
                         </div>
                     </div>
