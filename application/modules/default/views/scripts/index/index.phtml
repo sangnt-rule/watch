@@ -73,7 +73,7 @@
                                 </a>
 
                                 <span class="block2-price m-text6 p-r-5">
-                                    <?php echo $value[DbTable_Watch::COL_WATCH_PRICE].' VND';?>
+                                    <?php echo Application_Function_Format::price($value[DbTable_Watch::COL_WATCH_PRICE]);?>VND
                                 </span>
                             </div>
                         </div>
@@ -126,7 +126,7 @@
 
 
                                     <span class="block2-newprice m-text8">
-                                            <?php echo $value[DbTable_Watch::COL_WATCH_PRICE]; ?>
+                                            <?php echo Application_Function_Format::price($value[DbTable_Watch::COL_WATCH_PRICE]); ?>
                                     </span>
                                 </div>
 
@@ -209,7 +209,7 @@
                                     </a>
 
                                     <span class="block2-price m-text6 p-r-5">
-                                         <?php echo $value[DbTable_Watch::COL_WATCH_PRICE].' VND';?>
+                                         <?php echo Application_Function_Format::price($value[DbTable_Watch::COL_WATCH_PRICE]);?>VND
                                     </span>
                                 </div>
                             </div>
