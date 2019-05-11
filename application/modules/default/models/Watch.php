@@ -51,5 +51,11 @@ class Model_Watch extends Application_Singleton
         $data = $this->_dao->search($idMachine, $idCord, $search);
         return $data ? $data->toArray() : null;
     }
+    public function getById($id)
+    {
+        $id = intval($id);
+        $data = $this->_dao->getById($id);
+        return $data ? $data->toArray() : null;
+    }
 
 }
