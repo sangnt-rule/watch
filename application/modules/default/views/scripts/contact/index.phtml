@@ -34,7 +34,7 @@
 <body class="animsition">
 
 <!-- Title Page -->
-<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(images/heading-pages-06.jpg);">
+<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(images/banner_about.jpg);">
     <h2 class="l-text2 t-center">
         Contact
     </h2>
@@ -51,7 +51,7 @@
             </div>
 
             <div class="col-md-6 p-b-30">
-                <form class="leave-comment">
+                <form id="validate" target="ifrmEdit" class="leave-comment" action="" method="post">
                     <h4 class="m-text26 p-b-36 p-t-15">
                         Liên hệ với chúng tôi
                     </h4>
@@ -61,7 +61,7 @@
                     </div>
 
                     <div class="bo4 of-hidden size15 m-b-20">
-                        <input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="phone-number" placeholder="Số điện thoại">
+                        <input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="phone" placeholder="Số điện thoại">
                     </div>
 
                     <div class="bo4 of-hidden size15 m-b-20">
@@ -72,11 +72,12 @@
 
                     <div class="w-size25">
                         <!-- Button -->
-                        <button class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4">
+                        <button class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4" type="submit">
                             Gửi
                         </button>
                     </div>
                 </form>
+                <iframe name="ifrmEdit" id="ifrmEdit" style="display:none"></iframe>
             </div>
         </div>
     </div>

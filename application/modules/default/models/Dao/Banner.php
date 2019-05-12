@@ -23,6 +23,7 @@ class Model_Dao_Banner extends DbTable_Banner
                 )
             )
             ->where(DbTable_Banner::COL_BANNER_ACTIVE.'=?', Application_Constant_Db_ConfigActive::ACTIVE)
+            ->order(DbTable_Banner::COL_BANNER_PRIORITY . ' desc')
         ;
         return $this->fetchAll($select);
     }

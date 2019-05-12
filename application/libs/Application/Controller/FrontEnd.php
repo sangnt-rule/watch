@@ -22,7 +22,6 @@ class Application_Controller_FrontEnd extends Application_Controller
         parent::init();
 
         $this->_machine = Model_Machine::getInstance()->getAll();
-
         $this->_cord = Model_Cord::getInstance()->getAll();
 
     }

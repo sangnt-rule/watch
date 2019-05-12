@@ -377,11 +377,11 @@ class Application_Controller extends Zend_Controller_Action
         $mail->setBodyHtml($body);
         $mail->setFrom(
             $config->smtp->config->username,
-            'vedulich.vn Admin'
+            'Watch Admin'
         );
         $mail->addTo($email, $fullName);
         $mail->setSubject(
-            sprintf('Vedulich.vn %s', $subject)
+            sprintf('watch.lc %s', $subject)
         );
         $transport = new Zend_Mail_Transport_Smtp($config->smtp->host, $config->smtp->config->toArray());
         $mail->send($transport);
