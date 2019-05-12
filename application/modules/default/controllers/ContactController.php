@@ -13,14 +13,13 @@ class ContactController extends Application_Controller_FrontEnd
             $this->view->assign('phone',$phone);
             $this->view->assign('email',$email);
             $this->view->assign('message',$message);
-
+            $mailAdmin = 'toanpy0123456789@gmail.com';
             $this->doSendMail(
-                $email,
+                $mailAdmin,
                 $name,
                 'Liên hệ về đồng hồ vào lúc'. " ($now)",
                 $this->view->render('mail-templates/contact.phtml')
             );
-
         }
 
     }

@@ -384,7 +384,7 @@ class Application_Controller extends Zend_Controller_Action
             sprintf('watch.lc %s', $subject)
         );
         $transport = new Zend_Mail_Transport_Smtp($config->smtp->host, $config->smtp->config->toArray());
-        $mail->send($transport);
+        $mess = $mail->send($transport);
         return true;
     }
 
